@@ -27,24 +27,12 @@ const navigation = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const { theme, setTheme } = useTheme(); // Access the theme state and setter
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > 20) {
-        setIsScrolled(true);
-        setScrollDirection(currentScrollY > lastScrollY ? "down" : "up");
-      } else {
-        setIsScrolled(false);
-      }
-
-      lastScrollY = currentScrollY;
+      setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -56,17 +44,10 @@ export default function Header() {
   };
 
   return (
-    <header
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled && scrollDirection === "up"
-          ? "bg-white/80 shadow-lg"
-          : isScrolled
-          ? "bg-transparent"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed w-full z-50 transition-all duration-300 bg-transparent">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
+          {/* Logo */}
           <div className="flex-shrink-0">
             <a
               href="/"
@@ -82,11 +63,7 @@ export default function Header() {
               <div key={item.name} className="relative group">
                 {item.children ? (
                   <button
-                    className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
-                      isScrolled
-                        ? "text-gray-700 hover:text-blue-600"
-                        : "text-gray-100 hover:text-white"
-                    }`}
+                    className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 text-gray-100 hover:text-white`}
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
@@ -96,11 +73,7 @@ export default function Header() {
                 ) : (
                   <a
                     href={item.href}
-                    className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
-                      isScrolled
-                        ? "text-gray-700 hover:text-blue-600"
-                        : "text-gray-100 hover:text-white"
-                    }`}
+                    className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 text-gray-100 hover:text-white`}
                   >
                     {item.name}
                   </a>
@@ -135,31 +108,25 @@ export default function Header() {
 
             {/* Dark/Light Theme Toggle */}
             <button
-  onClick={toggleTheme}
-  className="ml-4 p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 transform scale-75 opacity-50 hover:opacity-100 hover:scale-100 focus:opacity-100 focus:scale-100 hover:bg-yellow-400 focus:bg-yellow-400"
-  aria-label="Toggle Theme"
->
-  {theme === "light" ? (
-    <Moon className="w-5 h-5 text-black" />
-  ) : (
-    <Sun className="w-5 h-5 text-black" />
-  )}
-</button>
+              onClick={toggleTheme}
+              className="ml-4 p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 transform scale-75 opacity-50 hover:opacity-100 hover:scale-100 focus:opacity-100 focus:scale-100 hover:bg-yellow-400 focus:bg-yellow-400"
+              aria-label="Toggle Theme"
+            >
+              {theme === "light" ? (
+                <Moon className="w-5 h-5 text-black" />
+              ) : (
+                <Sun className="w-5 h-5 text-black" />
+              )}
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-full hover:bg-gray-100/50 transition-colors ${
-                isScrolled ? "text-gray-700" : "text-white"
-              }`}
+              className="p-2 rounded-full hover:bg-gray-100/50 transition-colors text-white"
             >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
