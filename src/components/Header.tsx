@@ -121,7 +121,21 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Theme Toggle for Mobile */}
+            <button
+              onClick={toggleTheme}
+              className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 hover:bg-yellow-400 focus:bg-yellow-400"
+              aria-label="Toggle Theme"
+            >
+              {theme === "light" ? (
+                <Moon className="w-5 h-5 text-black" />
+              ) : (
+                <Sun className="w-5 h-5 text-black" />
+              )}
+            </button>
+
+            {/* Hamburger Menu */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-full hover:bg-gray-100/50 transition-colors text-white"
@@ -149,17 +163,6 @@ export default function Header() {
                 {item.name}
               </a>
             ))}
-            <button
-              onClick={toggleTheme}
-              className="ml-4 p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300"
-              aria-label="Toggle Theme"
-            >
-              {theme === "light" ? (
-                <Moon className="w-5 h-5" />
-              ) : (
-                <Sun className="w-5 h-5" />
-              )}
-            </button>
           </div>
         </div>
       </nav>
