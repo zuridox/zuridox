@@ -1,0 +1,98 @@
+import React from 'react';
+import { Calendar, MapPin, Users, ExternalLink } from 'lucide-react';
+
+const events = [
+  {
+    title: "Tech Innovation Summit 2024",
+    date: "April 15-16, 2024",
+    location: "San Francisco, CA",
+    type: "Conference",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
+    description: "Join industry leaders for two days of insights into emerging technologies and digital transformation.",
+    attendees: "500+ Expected"
+  },
+  {
+    title: "Digital Transformation Workshop",
+    date: "April 20, 2024",
+    location: "Virtual Event",
+    type: "Workshop",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800",
+    description: "Hands-on workshop focusing on practical strategies for digital transformation.",
+    attendees: "200+ Expected"
+  },
+  {
+    title: "Cloud Computing Masterclass",
+    date: "May 5, 2024",
+    location: "New York, NY",
+    type: "Training",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
+    description: "Deep dive into cloud architecture and implementation strategies.",
+    attendees: "150+ Expected"
+  }
+];
+
+export default function EventsPage() {
+  return (
+    <div className="pt-20">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h1 className="text-4xl font-bold mb-4">Upcoming Events</h1>
+          <p className="text-xl text-blue-100">
+            Join us for insightful discussions and networking opportunities
+          </p>
+        </div>
+      </div>
+
+      {/* Events Grid */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {events.map((event, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-sm overflow-hidden group">
+              <div className="aspect-video overflow-hidden relative">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">
+                    {event.type}
+                  </span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h2 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
+                  {event.title}
+                </h2>
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <Calendar className="w-4 h-4" />
+                    <span>{event.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <MapPin className="w-4 h-4" />
+                    <span>{event.location}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <Users className="w-4 h-4" />
+                    <span>{event.attendees}</span>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-6">{event.description}</p>
+                <div className="flex items-center justify-between">
+                  <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                    Register Now
+                  </button>
+                  <button className="text-blue-600 hover:text-blue-700 transition-colors">
+                    <ExternalLink className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
