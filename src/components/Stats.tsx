@@ -1,11 +1,11 @@
-import React from 'react';
+
 import { Trophy, Building2, Users2, Star } from 'lucide-react';
 import { useTheme } from "../ThemeContext";  
 
 const stats = [
   {
     icon: Trophy,
-    value: "500+",
+    value: "28+",
     label: "Successful Projects",
     description: "Delivered with excellence"
   },
@@ -17,7 +17,7 @@ const stats = [
   },
   {
     icon: Users2,
-    value: "200+",
+    value: "10+",
     label: "Expert Professionals",
     description: "Dedicated team members"
   },

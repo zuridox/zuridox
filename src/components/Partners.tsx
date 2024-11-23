@@ -1,35 +1,42 @@
 import React from 'react';
+import IBM from '../assets/ibm.png';
+import ORACLE from '../assets/oracle.png';
+import MICROSOFT from '../assets/microsoft.png';
+import SALESFORCE from '../assets/salesforce.png';
+import AWS from '../assets/file.png';
+import GOOGLe from '../assets/google-cloud.png';
+
 import { useTheme } from '../ThemeContext'; // Assuming you have this hook or context
 
 const partners = [
   {
     name: "Microsoft",
-    logo: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&q=80&w=150",
+    logo: MICROSOFT,
     description: "Gold Partner"
   },
   {
     name: "Amazon Web Services",
-    logo: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&q=80&w=150",
+    logo: AWS,
     description: "Advanced Consulting Partner"
   },
   {
     name: "Google Cloud",
-    logo: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&q=80&w=150",
+    logo: GOOGLe,
     description: "Premier Partner"
   },
   {
     name: "Salesforce",
-    logo: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&q=80&w=150",
+    logo: SALESFORCE,
     description: "Platinum Partner"
   },
   {
     name: "Oracle",
-    logo: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&q=80&w=150",
+    logo: ORACLE,
     description: "Gold Partner"
   },
   {
     name: "IBM",
-    logo: "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&q=80&w=150",
+    logo: IBM,
     description: "Platinum Partner"
   }
 ];
