@@ -1,24 +1,23 @@
-import React from 'react';
 import { Star, Quote } from 'lucide-react';
 import { useTheme } from '../ThemeContext'; // Assuming you have this hook or context
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Payal Sharma",
     role: "CTO, TechCorp",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
     content: "Zuridox transformed our digital infrastructure completely. Their expertise in IT consulting helped us achieve a 200% increase in efficiency.",
     rating: 5
   },
   {
-    name: "Michael Chen",
+    name: "Rahul Kumar",
     role: "CEO, InnovateLabs",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200",
     content: "The team's dedication to excellence and innovative solutions has made them our go-to technology partner. Exceptional service!",
     rating: 5
   },
   {
-    name: "Emily Rodriguez",
+    name: "Nancy Tyagi",
     role: "Director, DataFlow",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200",
     content: "Working with Zuridox has been transformative. Their strategic approach to IT consulting delivered remarkable results for our business.",
