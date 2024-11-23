@@ -23,6 +23,10 @@ import CaseStudiesPage from "./components/pages/CaseStudiesPage";
 import EventsPage from "./components/pages/EventsPage";
 import HelpCenterPage from "./components/pages/HelpCenterPage";
 import WhatsAppButton from "./components/WhatsappButton";
+import ContactPage from "./components/pages/contactPage";
+import PrivacyPolicyPage from "./components/pages/PrivacyPage";
+import TermsAndcondition from "./components/pages/TermsandCon";
+
 
 function ScrollToTop() {
   const location = useLocation();
@@ -67,6 +71,9 @@ function App() {
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/help" element={<HelpCenterPage />} />
+          <Route path="/Contact" element={<ContactPage />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
+          <Route path="/Terms" element={<TermsAndcondition />} />
           <Route
             path="*"
             element={<p>Page not found. Please navigate to a valid page.</p>}

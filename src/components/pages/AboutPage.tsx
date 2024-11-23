@@ -1,36 +1,57 @@
-import { Target, Users, Rocket, Heart } from 'lucide-react';
+import { Target, Users, Rocket, Heart } from "lucide-react";
+import { useTheme } from "../../ThemeContext";
 
 const values = [
   {
     icon: Target,
     title: "Innovation First",
-    description: "We constantly push boundaries to deliver cutting-edge solutions"
+    description:
+      "We constantly push boundaries to deliver cutting-edge solutions",
   },
   {
     icon: Users,
     title: "Client Success",
-    description: "Your success is our success - we're committed to your growth"
+    description: "Your success is our success - we're committed to your growth",
   },
   {
     icon: Rocket,
     title: "Excellence",
-    description: "We maintain the highest standards in everything we do"
+    description: "We maintain the highest standards in everything we do",
   },
   {
     icon: Heart,
     title: "Integrity",
-    description: "Trust and transparency are the foundation of our relationships"
-  }
+    description:
+      "Trust and transparency are the foundation of our relationships",
+  },
 ];
 
 export default function AboutPage() {
+  const { theme } = useTheme(); // Get the current theme
+
   return (
-    <div className="pt-20">
+    <div
+      className={`pt-20 ${
+        theme === "dark"
+          ? "bg-gray-900 text-white"
+          : "bg-gray-100 text-gray-900"
+      }`}
+    >
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
+      <div
+        className={`py-16 ${
+          theme === "dark"
+            ? "bg-gradient-to-r from-gray-800 to-gray-700"
+            : "bg-gradient-to-r from-blue-900 to-blue-700"
+        } text-white`}
+      >
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">About Zuridox</h1>
-          <p className="text-xl text-blue-100">
+          <p
+            className={`text-xl ${
+              theme === "dark" ? "text-gray-300" : "text-blue-100"
+            }`}
+          >
             Transforming businesses through innovative technology solutions
           </p>
         </div>
@@ -39,37 +60,75 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
-            <p className="text-gray-600">
-              To empower businesses with innovative technology solutions that drive growth, 
-              efficiency, and competitive advantage in the digital age.
-            </p>
-          </div>
-          <div className="bg-white p-8 rounded-2xl shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
-            <p className="text-gray-600">
-              To be the global leader in digital transformation, recognized for our 
-              excellence, innovation, and commitment to client success.
-            </p>
-          </div>
+          {["Our Mission", "Our Vision"].map((title, index) => (
+            <div
+              key={index}
+              className={`p-8 rounded-2xl shadow-sm ${
+                theme === "dark"
+                  ? "bg-gray-800 text-gray-300"
+                  : "bg-white text-gray-600"
+              }`}
+            >
+              <h2
+                className={`text-2xl font-bold mb-4 ${
+                  theme === "dark" ? "text-white" : "text-gray-900"
+                }`}
+              >
+                {title}
+              </h2>
+              <p>
+                {index === 0
+                  ? "To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage in the digital age."
+                  : "To be the global leader in digital transformation, recognized for our excellence, innovation, and commitment to client success."}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Company Values */}
-      <div className="bg-gray-50 py-16">
+      <div
+        className={`${theme === "dark" ? "bg-gray-800" : "bg-gray-50"} py-16`}
+      >
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Values</h2>
+          <h2
+            className={`text-3xl font-bold text-center mb-12 ${
+              theme === "dark" ? "text-white" : "text-gray-900"
+            }`}
+          >
+            Our Values
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={index} className="bg-white p-8 rounded-2xl shadow-sm">
-                  <div className="mb-4 p-3 bg-blue-50 rounded-xl inline-block">
-                    <Icon className="w-6 h-6 text-blue-600" />
+                <div
+                  key={index}
+                  className={`p-8 rounded-2xl shadow-sm ${
+                    theme === "dark"
+                      ? "bg-gray-700 text-gray-300"
+                      : "bg-white text-gray-600"
+                  }`}
+                >
+                  <div
+                    className={`mb-4 p-3 rounded-xl inline-block ${
+                      theme === "dark" ? "bg-gray-600" : "bg-blue-50"
+                    }`}
+                  >
+                    <Icon
+                      className={`w-6 h-6 ${
+                        theme === "dark" ? "text-blue-400" : "text-blue-600"
+                      }`}
+                    />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  <h3
+                    className={`text-xl font-bold mb-2 ${
+                      theme === "dark" ? "text-white" : "text-gray-900"
+                    }`}
+                  >
+                    {value.title}
+                  </h3>
+                  <p>{value.description}</p>
                 </div>
               );
             })}

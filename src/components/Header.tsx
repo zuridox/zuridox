@@ -8,22 +8,22 @@ const navigation = [
   { name: "Home", href: "/" },
   {
     name: "Solutions",
-    href: "#",
+    href: "/",
     children: [
-      { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+      { name: "Enterprise Solutions", href: "#" },
       {
         name: "Digital Transformation",
-        href: "/solutions/digital-transformation",
+        href: "#",
       },
-      { name: "Cloud Services", href: "/solutions/cloud" },
-      { name: "Consulting", href: "/solutions/consulting" },
-      { name: "Custom Development", href: "/solutions/development" },
+      { name: "Cloud Services", href: "#" },
+      { name: "Consulting", href: "#" },
+      { name: "Custom Development", href: "#" },
     ],
   },
-  { name: "Industries", href: "/industries" },
+  { name: "About", href: "/about" },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "Resources", href: "/resources" },
-  { name: "Contact", href: "/contact" },
+  { name: "Events", href: "/events" },
+  { name: "ContactUs", href: "/contact" },
 ];
 
 export default function Header() {

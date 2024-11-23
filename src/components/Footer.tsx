@@ -7,32 +7,33 @@ import {
   MapPin,
 } from "lucide-react";
 import { useTheme } from "../ThemeContext";
-import Logo from "../assets/Zuridox-Logo.png";
+import LogoLight from "../assets/Light-theme-Logo1.png"; // Light theme logo
+import LogoDark from "../assets/Zuridox-Logo.png"; // Dark theme logo
 
 const footerNavigation = {
   solutions: [
-    { name: "Enterprise Solutions", href: "/services#enterprise-solutions" },
-    { name: "Custom Development", href: "/services#custom-development" },
+    { name: "Enterprise Solutions", href: "#" },
+    { name: "Custom Development", href: "#" },
     {
       name: "Digital Transformation",
-      href: "/services#digital-transformation",
+      href: "#",
     },
-    { name: "IT Consulting", href: "/services#consulting" },
-    { name: "Cloud Services", href: "/services#cloud-services" },
+    { name: "IT Consulting", href: "#" },
+    { name: "Cloud Services", href: "#" },
   ],
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Leadership", href: "/leadership" },
+    { name: "case studies", href: "/case-studies" },
     { name: "Strategic Partners", href: "/partners" },
-    { name: "Newsroom", href: "/newsroom" },
     { name: "Careers", href: "/careers" },
+    { name: "ContactUs", href: "/contact" },
   ],
-  resources: [
-    { name: "Insights", href: "/insights" },
-    { name: "Success Stories", href: "/success-stories" },
-    { name: "Knowledge Base", href: "/knowledge-base" },
-    { name: "Documentation", href: "/docs" },
-    { name: "Support Center", href: "/support" },
+  Policy: [
+    { name: "Privacy Policy", href: "/privacypolicy" },
+    { name: "Terms & Conditions", href: "/Terms" },
+    // { name: "Knowledge Base", href: "/knowledge-base" },
+    // { name: "Documentation", href: "/docs" },
+    // { name: "Support Center", href: "/support" },
   ],
   social: [
     {
@@ -59,7 +60,9 @@ export default function Footer() {
   return (
     <footer
       className={`${
-        theme === "light" ? "border-t border-gray-300" : "border-t border-gray-800"
+        theme === "light"
+          ? "border-t border-gray-300"
+          : "border-t border-gray-800"
       } text-${theme === "dark" ? "white" : "gray-900"} ${
         theme === "dark" ? "bg-gray-900" : "bg-gray-100"
       }`}
@@ -69,7 +72,12 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <a href="/">
-              <img src={Logo} alt="Zuridox Logo" className="h-12 mb-6" />
+              {/* Conditionally render logo based on theme */}
+              <img
+                src={theme === "dark" ? LogoDark : LogoLight}
+                alt="Zuridox Logo"
+                className="h-12 mb-6"
+              />
             </a>
             <p
               className={`text-${
@@ -91,7 +99,7 @@ export default function Footer() {
               </a>
               <a
                 href="tel:+919389678954"
-                className="flex items-center space-x-3  hover:text-blue-400 transition-colors group"
+                className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
               >
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
                 <span className="group-hover:text-blue-400">
@@ -111,7 +119,7 @@ export default function Footer() {
           {Object.entries({
             Solutions: footerNavigation.solutions,
             Company: footerNavigation.company,
-            Resources: footerNavigation.resources,
+            Policy: footerNavigation.Policy,
           }).map(([title, items]) => (
             <div key={title}>
               <h3

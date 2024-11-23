@@ -9,6 +9,7 @@ import {
   HelpCircle,
   Link,
 } from "lucide-react";
+import { useTheme } from "../../ThemeContext";
 
 const categories = [
   {
@@ -37,6 +38,7 @@ const popularArticles = [
 ];
 
 export default function HelpCenterPage() {
+  const { theme } = useTheme();
   const [query, setQuery] = React.useState("");
   const [loading, setLoading] = React.useState(false);
 
@@ -50,7 +52,11 @@ export default function HelpCenterPage() {
   };
 
   return (
-    <div className="pt-20">
+    <div
+      className={`pt-20 ${
+        theme === "light" ? "bg-white text-gray-900" : "bg-gray-900 text-white"
+      }`}
+    >
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
@@ -65,11 +71,14 @@ export default function HelpCenterPage() {
               onChange={handleSearch}
               placeholder="Search for help..."
               aria-label="Search for help"
-              className="w-full pl-12 pr-4 py-3 rounded-lg text-gray-900"
+              className={`w-full pl-12 pr-4 py-3 rounded-lg ${
+                theme === "light"
+                  ? "text-gray-900 bg-gray-100"
+                  : "text-white bg-gray-800"
+              }`}
             />
             {loading ? (
               <div className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 animate-spin">
-                {/* Add a spinner here */}
                 <div className="border-4 border-gray-300 border-t-blue-600 rounded-full h-5 w-5"></div>
               </div>
             ) : (
@@ -87,13 +96,23 @@ export default function HelpCenterPage() {
             return (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all group"
+                className={`p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all group ${
+                  theme === "light" ? "bg-white" : "bg-gray-800"
+                }`}
               >
-                <div className="mb-6 p-4 bg-blue-50 rounded-xl inline-block group-hover:bg-blue-100 transition-colors">
+                <div
+                  className={`mb-6 p-4 rounded-xl inline-block group-hover:bg-blue-100 transition-colors ${
+                    theme === "light" ? "bg-blue-50" : "bg-gray-700"
+                  }`}
+                >
                   <Icon className="w-8 h-8 text-blue-600" />
                 </div>
                 <h2 className="text-xl font-bold mb-2">{category.title}</h2>
-                <p className="text-gray-600 mb-4">{category.description}</p>
+                <p className="mb-4">
+                  {theme === "light"
+                    ? category.description
+                    : category.description}
+                </p>
                 <Link
                   to={`/categories/${category.title}`}
                   className="text-blue-600 font-medium"
@@ -107,19 +126,25 @@ export default function HelpCenterPage() {
       </div>
 
       {/* Popular Articles & Contact */}
-      <div className="bg-gray-50 py-16">
+      <div
+        className={`py-16 ${theme === "light" ? "bg-gray-50" : "bg-gray-800"}`}
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Popular Articles */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Popular Articles</h2>
-              <div className="bg-white rounded-2xl shadow-sm p-6">
+              <div
+                className={`rounded-2xl shadow-sm p-6 ${
+                  theme === "light" ? "bg-white" : "bg-gray-700"
+                }`}
+              >
                 <ul className="space-y-4">
                   {popularArticles.map((article, index) => (
                     <li key={index}>
                       <Link
                         to={`/articles/${encodeURIComponent(article)}`}
-                        className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors"
+                        className="flex items-center gap-3 hover:text-blue-600 transition-colors"
                       >
                         <HelpCircle className="w-5 h-5" />
                         {article}
@@ -133,7 +158,11 @@ export default function HelpCenterPage() {
             {/* Contact Support */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Need More Help?</h2>
-              <div className="bg-white rounded-2xl shadow-sm p-6">
+              <div
+                className={`rounded-2xl shadow-sm p-6 ${
+                  theme === "light" ? "bg-white" : "bg-gray-700"
+                }`}
+              >
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-blue-50 rounded-lg">
@@ -141,7 +170,7 @@ export default function HelpCenterPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Phone Support</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p>+91-9389678954</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -150,7 +179,7 @@ export default function HelpCenterPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Email Support</h3>
-                      <p className="text-gray-600">support@zuridox.com</p>
+                      <p>zuridox@gmail.com</p>
                     </div>
                   </div>
                   <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
