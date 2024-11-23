@@ -4,9 +4,9 @@ import { useTheme } from "../../ThemeContext";
 const jobs = [
   {
     title: "Senior Full Stack Developer",
-    location: "San Francisco, CA",
+    location: "Delhi, India",
     type: "Full-time",
-    salary: "$120k - $180k",
+    salary: "Based on experience",
     description:
       "We're looking for an experienced Full Stack Developer to join our growing team.",
   },
@@ -14,15 +14,15 @@ const jobs = [
     title: "UX/UI Designer",
     location: "Remote",
     type: "Full-time",
-    salary: "$90k - $130k",
+    salary: "Based on experience",
     description:
       "Join our design team to create beautiful and intuitive user experiences.",
   },
   {
     title: "DevOps Engineer",
-    location: "New York, NY",
+    location: "Delhi, India",
     type: "Full-time",
-    salary: "$130k - $170k",
+    salary: "Based on experience",
     description:
       "Help us build and maintain our cloud infrastructure and deployment pipelines.",
   },
@@ -107,11 +107,12 @@ export default function CareersPage() {
                   </p>
                 </div>
                 <button
+                  
                   className={`px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors ${
                     theme === "light"
                       ? "bg-blue-600 text-white"
                       : "bg-blue-500 text-white"
-                  }`}
+                    }`}
                 >
                   Apply Now
                 </button>
