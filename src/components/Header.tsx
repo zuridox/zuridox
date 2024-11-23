@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react";
 import { useTheme } from "../ThemeContext";
-import Logo from "../assets/Zuridox-Logo.png";
+import LogoLight from "../assets/Light-theme-Logo1.png"; // Light theme logo
+import LogoDark from "../assets/Zuridox-Logo.png"; // Dark theme logo
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -40,14 +41,12 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Ensure default theme is dark
-  useEffect(() => {
-    if (!theme) setTheme("dark");
-  }, [theme, setTheme]);
-
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
+
+  // Determine the text color based on the theme
+  const textColorClass = theme === "light" ? "text-black" : "text-white";
 
   return (
     <header className="fixed w-full z-50 transition-all duration-300 bg-transparent">
@@ -56,7 +55,11 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/">
-              <img src={Logo} alt="Logo" className="h-8 sm:h-10" />
+              <img
+                src={theme === "light" ? LogoLight : LogoDark} // Conditionally set logo
+                alt="Logo"
+                className="h-8 sm:h-10"
+              />
             </a>
           </div>
 
@@ -66,7 +69,7 @@ export default function Header() {
               <div key={item.name} className="relative group">
                 {item.children ? (
                   <button
-                    className={`flex items-center space-x-1 px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 text-gray-100 hover:text-white`}
+                    className={`flex items-center space-x-1 px-4 py-2 text-sm font-bold rounded-full transition-all duration-300 ${textColorClass} hover:text-white`}
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
@@ -76,7 +79,7 @@ export default function Header() {
                 ) : (
                   <a
                     href={item.href}
-                    className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-300 text-gray-100 hover:text-white`}
+                    className={`px-4 py-2 text-sm font-bold rounded-full transition-all duration-300 ${textColorClass} hover:text-white`}
                   >
                     {item.name}
                   </a>
@@ -112,7 +115,7 @@ export default function Header() {
             {/* Dark/Light Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="ml-4 p-2 bg-yellow-400 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 transform scale-100 opacity-100 focus:ring-2 focus:ring-yellow-500"
+              className="ml-4 p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 transform scale-75 opacity-50 hover:opacity-100 hover:scale-100 focus:opacity-100 focus:scale-100 hover:bg-yellow-400 focus:bg-yellow-400"
               aria-label="Toggle Theme"
             >
               {theme === "light" ? (
@@ -128,7 +131,7 @@ export default function Header() {
             {/* Theme Toggle for Mobile */}
             <button
               onClick={toggleTheme}
-              className="p-2 bg-yellow-400 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 focus:ring-2 focus:ring-yellow-500"
+              className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 hover:bg-yellow-400 focus:bg-yellow-400"
               aria-label="Toggle Theme"
             >
               {theme === "light" ? (
@@ -165,7 +168,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                className={`block px-4 py-2 text-base font-bold ${textColorClass} hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors`}
               >
                 {item.name}
               </a>
