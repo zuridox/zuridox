@@ -1,52 +1,43 @@
-import React from 'react';
 import { Linkedin, Twitter, Mail } from 'lucide-react';
 import { useTheme } from '../ThemeContext'; // Assuming you have this hook or context
+import Ashar from "../assets/Team/ashar.jpg"
+import Savez from "../assets/Team/portfolio photo.jpg"
+import Farhan from "../assets/Team/farhan.jpg"
 
 const team = [
   {
-    name: "David Miller",
-    role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=300",
+    name: "Md Farhan Raza",
+    role: "Software Engineer",
+    image: Farhan,
     bio: "With 15+ years in IT consulting, David leads Zuridox's vision and strategy.",
     social: {
       linkedin: "#",
       twitter: "#",
-      email: "david@zuridox.com"
-    }
+      email: "farhan@zuridox.com",
+    },
   },
   {
-    name: "Lisa Zhang",
-    role: "CTO",
-    image: "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&q=80&w=300",
+    name: "Md Savez",
+    role: "Software Engineer",
+    image: Savez,
     bio: "Lisa brings deep technical expertise and innovation leadership to our solutions.",
     social: {
       linkedin: "#",
       twitter: "#",
-      email: "lisa@zuridox.com"
-    }
+      email: "savez@zuridox.com",
+    },
   },
   {
-    name: "James Wilson",
-    role: "Head of Development",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+    name: "Ashhar Jamali",
+    role: "Software Engineer",
+    image: Ashar,
     bio: "James oversees all development projects and ensures technical excellence.",
     social: {
       linkedin: "#",
       twitter: "#",
-      email: "james@zuridox.com"
-    }
+      email: "Ashhar@zuridox.com",
+    },
   },
-  {
-    name: "Maria Garcia",
-    role: "Lead Designer",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=300",
-    bio: "Maria creates stunning designs that captivate and engage users.",
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "maria@zuridox.com"
-    }
-  }
 ];
 
 export default function Team() {
@@ -64,7 +55,7 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {team.map((member, index) => (
             <div
               key={index}
@@ -73,7 +64,7 @@ export default function Team() {
             >
               <div className="relative mb-6">
                 {/* Add extra padding at the top of the card */}
-                <div className="p-4">
+                <div className="px-6">
                   <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-1 border-4 border-gray-900">
                     <img
                       src={member.image}

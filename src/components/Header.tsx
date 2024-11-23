@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react";
 import { useTheme } from "../ThemeContext";
+import Logo from "../assets/Zuridox-Logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -49,11 +50,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a
-              href="/"
-              className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"
-            >
-              Zuridox
+            <a href="/">
+              <img
+                src= {Logo}
+                alt="Logo"
+                className="h-8 sm:h-10"
+              />
             </a>
           </div>
 

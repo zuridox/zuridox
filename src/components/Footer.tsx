@@ -7,7 +7,8 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
-import { useTheme } from "../ThemeContext"; // Assuming you have this hook or context for theme switching
+import { useTheme } from "../ThemeContext";
+import Logo from "../assets/Zuridox-Logo.png";
 
 const footerNavigation = {
   solutions: [
@@ -68,7 +69,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold mb-6">Zuridox</h2>
+            <a href="/">
+              <img
+                src={Logo}
+                alt="Zuridox Logo"
+                className="h-12 mb-6"
+              />
+            </a>
             <p
               className={`text-${
                 theme === "dark" ? "gray-300" : "gray-700"
@@ -93,12 +100,12 @@ export default function Footer() {
               >
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
                 <span className="group-hover:text-blue-400">
-                  +91 938 967 8954
+                  +91 9389678954
                 </span>
               </a>
-              <div className="flex items-center space-x-3 ">
+              <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400" />
-                <span className=" hover:text-blue-400">
+                <span className="hover:text-blue-400">
                   Badarpur, New Delhi, India 110044
                 </span>
               </div>
