@@ -1,15 +1,16 @@
 import { Linkedin, Twitter, Mail } from 'lucide-react';
 import { useTheme } from '../ThemeContext'; // Assuming you have this hook or context
-import Ashar from "../assets/Team/ashar.jpg"
-import Savez from "../assets/Team/portfolio photo.jpg"
-import Farhan from "../assets/Team/farhan.jpg"
+import Ashar from "../assets/Team/ashar.jpg";
+import Savez from "../assets/Team/portfolio photo.jpg";
+import Farhan from "../assets/Team/farhan.jpg";
 
 const team = [
   {
     name: "Md Farhan Raza",
     role: "Software Engineer",
+    designation: "Founder", // Add designation
     image: Farhan,
-    bio: "With 15+ years in IT consulting, David leads Zuridox's vision and strategy.",
+    bio: "With 15+ years in IT consulting, Farhan leads Zuridox's vision and strategy.",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -19,8 +20,9 @@ const team = [
   {
     name: "Md Savez",
     role: "Software Engineer",
+    designation: "Co-Founder", // Add designation
     image: Savez,
-    bio: "Lisa brings deep technical expertise and innovation leadership to our solutions.",
+    bio: "Savez brings deep technical expertise and innovation leadership to our solutions.",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -30,8 +32,9 @@ const team = [
   {
     name: "Ashhar Jamali",
     role: "Software Engineer",
+    designation: "Co-Founder", // Add designation
     image: Ashar,
-    bio: "James oversees all development projects and ensures technical excellence.",
+    bio: "Ashhar oversees all development projects and ensures technical excellence.",
     social: {
       linkedin: "#",
       twitter: "#",
@@ -63,7 +66,6 @@ export default function Team() {
                 ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100'}`}
             >
               <div className="relative mb-6">
-                {/* Add extra padding at the top of the card */}
                 <div className="px-6">
                   <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-1 border-4 border-gray-900">
                     <img
@@ -102,7 +104,7 @@ export default function Team() {
               <div className={`text-center py-4 px-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
                 <p className={`text-blue-400 font-medium mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-600'}`}>
-                  {member.role}
+                  {member.role} <span className="text-sm font-normal">( {member.designation} )</span>
                 </p>
                 <p className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>{member.bio}</p>
               </div>

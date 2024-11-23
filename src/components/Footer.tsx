@@ -59,10 +59,10 @@ export default function Footer() {
 
   return (
     <footer
-      className={`${theme === "light" ? "border-t border-gray-300" : ""} text-${
-        theme === "dark" ? "white" : "gray-900"
-      } bg-gradient-to-b from-${theme === "dark" ? "gray-900" : "white"} to-${
-        theme === "dark" ? "gray-950" : "gray-100"
+      className={`${
+        theme === "light" ? "border-t border-gray-300" : "border-t border-gray-800"
+      } text-${theme === "dark" ? "white" : "gray-900"} ${
+        theme === "dark" ? "bg-gray-900" : "bg-gray-100"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
@@ -70,11 +70,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <a href="/">
-              <img
-                src={Logo}
-                alt="Zuridox Logo"
-                className="h-12 mb-6"
-              />
+              <img src={Logo} alt="Zuridox Logo" className="h-12 mb-6" />
             </a>
             <p
               className={`text-${
@@ -104,7 +100,7 @@ export default function Footer() {
                 </span>
               </a>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400" />
+                <MapPin className="w-5 h-5 group-hover:text-blue-400" />
                 <span className="hover:text-blue-400">
                   Badarpur, New Delhi, India 110044
                 </span>

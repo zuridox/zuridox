@@ -40,6 +40,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Ensure default theme is dark
+  useEffect(() => {
+    if (!theme) setTheme("dark");
+  }, [theme, setTheme]);
+
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
@@ -51,11 +56,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/">
-              <img
-                src= {Logo}
-                alt="Logo"
-                className="h-8 sm:h-10"
-              />
+              <img src={Logo} alt="Logo" className="h-8 sm:h-10" />
             </a>
           </div>
 
@@ -111,7 +112,7 @@ export default function Header() {
             {/* Dark/Light Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="ml-4 p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 transform scale-75 opacity-50 hover:opacity-100 hover:scale-100 focus:opacity-100 focus:scale-100 hover:bg-yellow-400 focus:bg-yellow-400"
+              className="ml-4 p-2 bg-yellow-400 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 transform scale-100 opacity-100 focus:ring-2 focus:ring-yellow-500"
               aria-label="Toggle Theme"
             >
               {theme === "light" ? (
@@ -127,7 +128,7 @@ export default function Header() {
             {/* Theme Toggle for Mobile */}
             <button
               onClick={toggleTheme}
-              className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 hover:bg-yellow-400 focus:bg-yellow-400"
+              className="p-2 bg-yellow-400 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 focus:ring-2 focus:ring-yellow-500"
               aria-label="Toggle Theme"
             >
               {theme === "light" ? (
