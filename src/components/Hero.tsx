@@ -6,6 +6,13 @@ import HeroIMG2 from "../assets/dark.mp4";
 export default function Hero() {
   const { theme } = useTheme();
 
+  const handleScrollToServices = () => {
+    const servicesSection = document.getElementById("services"); // Get the Services section by ID
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" }); // Smoothly scroll to the Services section
+    }
+  };
+
   return (
     <div className="relative h-screen overflow-hidden">
       {/* Background Video */}
@@ -35,13 +42,13 @@ export default function Hero() {
             Pioneering Digital Excellence Through Innovation
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-blue-500/25">
+          <div className="flex justify-center">
+            <button
+              onClick={handleScrollToServices} // Scroll to Services section on click
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg shadow-blue-500/25"
+            >
               <span className="text-lg font-medium">Get Started</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-xl hover:bg-white/20 transition-all duration-300 text-lg font-medium shadow-lg">
-              Learn More
             </button>
           </div>
         </div>

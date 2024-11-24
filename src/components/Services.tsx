@@ -159,7 +159,7 @@ const Services: React.FC = () => {
   const [activeService, setActiveService] = useState<number | null>(null);
 
   return (
-    <section
+    <section id="services"
       className={`relative py-28 ${theme === "dark" ? "bg-gray-950" : "bg-white"} overflow-hidden`}
     >
       <ProfessionalParticleBackground />

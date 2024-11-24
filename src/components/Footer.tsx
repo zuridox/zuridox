@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Import Link
 import {
   Facebook,
   Linkedin,
@@ -12,28 +13,22 @@ import LogoDark from "../assets/Zuridox-Logo.png"; // Dark theme logo
 
 const footerNavigation = {
   solutions: [
-    { name: "Enterprise Solutions", href: "#" },
-    { name: "Custom Development", href: "#" },
-    {
-      name: "Digital Transformation",
-      href: "#",
-    },
-    { name: "IT Consulting", href: "#" },
-    { name: "Cloud Services", href: "#" },
+    { name: "Enterprise Solutions", to: "/enterprise-solutions" },
+    { name: "Custom Development", to: "/custom-development" },
+    { name: "Digital Transformation", to: "/digital-transformation" },
+    { name: "IT Consulting", to: "/it-consulting" },
+    { name: "Cloud Services", to: "/cloud-services" },
   ],
   company: [
-    { name: "About Us", href: "/about" },
-    { name: "case studies", href: "/case-studies" },
-    { name: "Strategic Partners", href: "/partners" },
-    { name: "Careers", href: "/careers" },
-    { name: "ContactUs", href: "/contact" },
+    { name: "About Us", to: "/about" },
+    { name: "Case Studies", to: "/case-studies" },
+    { name: "Strategic Partners", to: "/partners" },
+    { name: "Careers", to: "/careers" },
+    { name: "Contact Us", to: "/contact" },
   ],
-  Policy: [
-    { name: "Privacy Policy", href: "/privacypolicy" },
-    { name: "Terms & Conditions", href: "/Terms" },
-    // { name: "Knowledge Base", href: "/knowledge-base" },
-    // { name: "Documentation", href: "/docs" },
-    // { name: "Support Center", href: "/support" },
+  policy: [
+    { name: "Privacy Policy", to: "/privacy-policy" },
+    { name: "Terms & Conditions", to: "/terms" },
   ],
   social: [
     {
@@ -55,7 +50,7 @@ const footerNavigation = {
 };
 
 export default function Footer() {
-  const { theme } = useTheme(); // Get the current theme
+  const { theme } = useTheme();
 
   return (
     <footer
@@ -71,14 +66,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <a href="/">
-              {/* Conditionally render logo based on theme */}
+            <Link to="/">
               <img
                 src={theme === "dark" ? LogoDark : LogoLight}
                 alt="Zuridox Logo"
                 className="h-12 mb-6"
               />
-            </a>
+            </Link>
             <p
               className={`text-${
                 theme === "dark" ? "gray-300" : "gray-700"
@@ -119,7 +113,7 @@ export default function Footer() {
           {Object.entries({
             Solutions: footerNavigation.solutions,
             Company: footerNavigation.company,
-            Policy: footerNavigation.Policy,
+            Policy: footerNavigation.policy,
           }).map(([title, items]) => (
             <div key={title}>
               <h3
@@ -132,14 +126,14 @@ export default function Footer() {
               <ul className="space-y-4">
                 {items.map((item) => (
                   <li key={item.name}>
-                    <a
-                      href={item.href}
+                    <Link
+                      to={item.to}
                       className={`text-${
                         theme === "dark" ? "gray-300" : "gray-700"
                       } hover:text-blue-400 transition-colors duration-200 text-sm`}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

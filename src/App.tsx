@@ -26,7 +26,7 @@ import WhatsAppButton from "./components/WhatsappButton";
 import ContactPage from "./components/pages/contactPage";
 import PrivacyPolicyPage from "./components/pages/PrivacyPage";
 import TermsAndcondition from "./components/pages/TermsandCon";
-
+import PageNotFound from "./components/pages/PageNotFound";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -74,10 +74,7 @@ function App() {
           <Route path="/Contact" element={<ContactPage />} />
           <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
           <Route path="/Terms" element={<TermsAndcondition />} />
-          <Route
-            path="*"
-            element={<p>Page not found. Please navigate to a valid page.</p>}
-          />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </div>

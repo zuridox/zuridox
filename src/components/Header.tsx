@@ -113,14 +113,10 @@ export default function Header() {
             {/* Dark/Light Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="ml-4 p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 transform scale-75 opacity-50 hover:opacity-100 hover:scale-100 focus:opacity-100 focus:scale-100 hover:bg-yellow-400 focus:bg-yellow-400"
+              className="ml-4 p-2 text-black bg-yellow-400 rounded-full shadow-lg transition-all duration-300 transform scale-75 opacity-80 hover:opacity-100 hover:scale-100 focus:opacity-100 focus:scale-100"
               aria-label="Toggle Theme"
             >
-              {theme === "light" ? (
-                <Moon className="w-5 h-5 text-black" />
-              ) : (
-                <Sun className="w-5 h-5 text-black" />
-              )}
+              {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
             </button>
           </div>
 
@@ -129,14 +125,10 @@ export default function Header() {
             {/* Theme Toggle for Mobile */}
             <button
               onClick={toggleTheme}
-              className="p-2 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-full shadow-lg transition-all duration-300 hover:bg-yellow-400 focus:bg-yellow-400"
+              className="p-2 bg-yellow-400 text-black rounded-full shadow-lg transition-all duration-300 hover:opacity-100 focus:opacity-100"
               aria-label="Toggle Theme"
             >
-              {theme === "light" ? (
-                <Moon className="w-5 h-5 text-black" />
-              ) : (
-                <Sun className="w-5 h-5 text-black" />
-              )}
+              {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
             </button>
 
             {/* Hamburger Menu */}
@@ -144,11 +136,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-full hover:bg-gray-100/50 transition-colors text-white"
             >
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -161,12 +149,12 @@ export default function Header() {
               : "opacity-0 -translate-y-4 pointer-events-none"
           }`}
         >
-          <div className="px-4 py-6 space-y-3 bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl mt-2">
+          <div className="px-4 py-6 space-y-3 bg-white/90 backdrop-blur-lg rounded-2xl shadow-xl mt-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.to}
-                className={`block px-4 py-2 text-base font-bold ${textColorClass} hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors`}
+                className={`block px-4 py-2 text-base font-bold text-gray-900 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors`}
               >
                 {item.name}
               </Link>
