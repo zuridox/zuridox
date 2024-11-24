@@ -13,11 +13,11 @@ import LogoDark from "../assets/Zuridox-Logo.png"; // Dark theme logo
 
 const footerNavigation = {
   solutions: [
-    { name: "Enterprise Solutions", to: "/enterprise-solutions" },
-    { name: "Custom Development", to: "/custom-development" },
-    { name: "Digital Transformation", to: "/digital-transformation" },
-    { name: "IT Consulting", to: "/it-consulting" },
-    { name: "Cloud Services", to: "/cloud-services" },
+    { name: "Web Development", to: "#" },
+    { name: "App Development", to: "#" },
+    { name: "search Engine Optimization", to: "#" },
+    { name: "Digital Marketing", to: "#" },
+    { name: "Comprehensive IT Consulting", to: "#" },
   ],
   company: [
     { name: "About Us", to: "/about" },
@@ -88,7 +88,7 @@ export default function Footer() {
               >
                 <Mail className="w-5 h-5 group-hover:text-blue-400" />
                 <span className="group-hover:text-blue-400">
-                  contact@zuridox.com
+                  zuridox@gmail.com
                 </span>
               </a>
               <a
@@ -98,6 +98,15 @@ export default function Footer() {
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
                 <span className="group-hover:text-blue-400">
                   +91 9389678954
+                </span>
+              </a>
+              <a
+                href="tel:+917050068050"
+                className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
+              >
+                <Phone className="w-5 h-5 group-hover:text-blue-400" />
+                <span className="group-hover:text-blue-400">
+                  +91 7050068050
                 </span>
               </a>
               <div className="flex items-center space-x-3">
