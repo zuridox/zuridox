@@ -3,7 +3,6 @@ import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react";
 import { useTheme } from "../ThemeContext";
 import LogoLight from "../assets/Light-theme-Logo1.png"; // Light theme logo
 import LogoDark from "../assets/Zuridox-Logo.png"; // Dark theme logo
-import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -12,7 +11,10 @@ const navigation = [
     href: "/",
     children: [
       { name: "Enterprise Solutions", href: "#" },
-      { name: "Digital Transformation", href: "#" },
+      {
+        name: "Digital Transformation",
+        href: "#",
+      },
       { name: "Cloud Services", href: "#" },
       { name: "Consulting", href: "#" },
       { name: "Custom Development", href: "#" },
@@ -43,6 +45,7 @@ export default function Header() {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
+  // Determine the text color based on the theme
   const textColorClass = theme === "light" ? "text-black" : "text-white";
 
   return (
@@ -51,13 +54,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/">
+            <a href="/">
               <img
-                src={theme === "light" ? LogoLight : LogoDark}
+                src={theme === "light" ? LogoLight : LogoDark} // Conditionally set logo
                 alt="Logo"
                 className="h-8 sm:h-10"
               />
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Menu */}
@@ -74,12 +77,12 @@ export default function Header() {
                     <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                   </button>
                 ) : (
-                  <Link
+                  <a
                     href={item.href}
                     className={`px-4 py-2 text-sm font-bold rounded-full transition-all duration-300 ${textColorClass} hover:text-white`}
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 )}
 
                 {/* Dropdown */}
@@ -95,13 +98,13 @@ export default function Header() {
                   >
                     <div className="py-2">
                       {item.children.map((child) => (
-                        <Link
+                        <a
                           key={child.name}
                           href={child.href}
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                         >
                           {child.name}
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -162,13 +165,13 @@ export default function Header() {
         >
           <div className="px-4 py-6 space-y-3 bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl mt-2">
             {navigation.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
                 className={`block px-4 py-2 text-base font-bold ${textColorClass} hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors`}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
         </div>
