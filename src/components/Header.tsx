@@ -1,29 +1,27 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react";
 import { useTheme } from "../ThemeContext";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import LogoLight from "../assets/Light-theme-Logo1.png"; // Light theme logo
 import LogoDark from "../assets/Zuridox-Logo.png"; // Dark theme logo
 
 const navigation = [
-  { name: "Home", href: "/" },
+  { name: "Home", to: "/" },
   {
     name: "Solutions",
-    href: "/",
+    to: "/solutions",
     children: [
-      { name: "Enterprise Solutions", href: "#" },
-      {
-        name: "Digital Transformation",
-        href: "#",
-      },
-      { name: "Cloud Services", href: "#" },
-      { name: "Consulting", href: "#" },
-      { name: "Custom Development", href: "#" },
+      { name: "Enterprise Solutions", to: "/enterprise-solutions" },
+      { name: "Digital Transformation", to: "/digital-transformation" },
+      { name: "Cloud Services", to: "/cloud-services" },
+      { name: "Consulting", to: "/consulting" },
+      { name: "Custom Development", to: "/custom-development" },
     ],
   },
-  { name: "About", href: "/about" },
-  { name: "Case Studies", href: "/case-studies" },
-  { name: "Events", href: "/events" },
-  { name: "ContactUs", href: "/contact" },
+  { name: "About", to: "/about" },
+  { name: "Case Studies", to: "/case-studies" },
+  { name: "Events", to: "/events" },
+  { name: "ContactUs", to: "/contact" },
 ];
 
 export default function Header() {
@@ -54,13 +52,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/">
+            <Link to="/">
               <img
                 src={theme === "light" ? LogoLight : LogoDark} // Conditionally set logo
                 alt="Logo"
                 className="h-8 sm:h-10"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
@@ -77,12 +75,12 @@ export default function Header() {
                     <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                   </button>
                 ) : (
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.to}
                     className={`px-4 py-2 text-sm font-bold rounded-full transition-all duration-300 ${textColorClass} hover:text-white`}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 )}
 
                 {/* Dropdown */}
@@ -98,13 +96,13 @@ export default function Header() {
                   >
                     <div className="py-2">
                       {item.children.map((child) => (
-                        <a
+                        <Link
                           key={child.name}
-                          href={child.href}
+                          to={child.to}
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                         >
                           {child.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -165,13 +163,13 @@ export default function Header() {
         >
           <div className="px-4 py-6 space-y-3 bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl mt-2">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.to}
                 className={`block px-4 py-2 text-base font-bold ${textColorClass} hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
