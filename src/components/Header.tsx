@@ -116,7 +116,11 @@ export default function Header() {
               className="ml-4 p-2 text-black bg-yellow-400 rounded-full shadow-lg transition-all duration-300 transform scale-75 opacity-80 hover:opacity-100 hover:scale-100 focus:opacity-100 focus:scale-100"
               aria-label="Toggle Theme"
             >
-              {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+              {theme === "light" ? (
+                <Moon className="w-5 h-5" />
+              ) : (
+                <Sun className="w-5 h-5" />
+              )}
             </button>
           </div>
 
@@ -128,7 +132,11 @@ export default function Header() {
               className="p-2 bg-yellow-400 text-black rounded-full shadow-lg transition-all duration-300 hover:opacity-100 focus:opacity-100"
               aria-label="Toggle Theme"
             >
-              {theme === "light" ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+              {theme === "light" ? (
+                <Moon className="w-5 h-5" />
+              ) : (
+                <Sun className="w-5 h-5" />
+              )}
             </button>
 
             {/* Hamburger Menu */}
@@ -136,7 +144,11 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-full hover:bg-gray-100/50 transition-colors text-white"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -154,6 +166,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.to}
+                onClick={() => setIsMenuOpen(false)} // Close menu on link click
                 className={`block px-4 py-2 text-base font-bold text-gray-900 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors`}
               >
                 {item.name}
