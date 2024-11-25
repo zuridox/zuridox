@@ -23,7 +23,7 @@ const stats = [
   },
   {
     icon: Star,
-    value: "98%",
+    value: "90%",
     label: "Client Satisfaction",
     description: "Consistently achieved"
   }

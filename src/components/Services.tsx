@@ -13,39 +13,43 @@ import {
 
 const services = [
   {
-    icon: Code2,
-    title: "Enterprise Software Development",
+    icon: Code2, // Web Development icon
+    title: "Web Development",
     description:
-      "Architecting scalable, secure enterprise solutions that drive digital transformation and operational efficiency.",
+      "Building responsive and dynamic websites tailored to your business needs, delivering exceptional user experiences.",
     features: [
-      "Custom Web Applications",
-      "Enterprise Architecture",
-      "Cloud Integration",
+      "Custom Website Design",
+      "E-commerce Platforms",
+      "Progressive Web Apps",
     ],
     color: "from-blue-600 to-blue-800",
   },
   {
-    icon: Smartphone,
-    title: "Mobile Strategy & Development",
+    icon: Smartphone, // App Development icon
+    title: "App Development",
     description:
-      "Creating enterprise-grade mobile solutions that enhance productivity and customer engagement across platforms.",
+      "Crafting high-quality, user-centric mobile applications to enhance engagement and streamline operations.",
     features: [
-      "Cross-Platform Development",
-      "Enterprise Mobility Management",
+      "iOS & Android Development",
+      "Cross-Platform Apps",
       "Custom App Ecosystems",
     ],
     color: "from-indigo-600 to-indigo-800",
   },
   {
-    icon: Shield,
-    title: "Cybersecurity Solutions",
+    icon: Workflow, // SEO icon
+    title: "Search Engine Optimization",
     description:
-      "Comprehensive security strategies to protect your digital assets, ensure compliance, and mitigate advanced cyber risks.",
-    features: ["Risk Assessment", "Threat Monitoring", "Compliance Frameworks"],
+      "Boosting online visibility through proven SEO strategies to drive organic traffic and improve search rankings.",
+    features: [
+      "Keyword Optimization",
+      "On-Page & Off-Page SEO",
+      "Content Strategy",
+    ],
     color: "from-red-600 to-red-800",
   },
   {
-    icon: Database,
+    icon: Database, // Data Intelligence icon (unchanged)
     title: "Data Intelligence",
     description:
       "Advanced data analytics and AI-driven insights to transform complex data into strategic business intelligence.",
@@ -57,26 +61,31 @@ const services = [
     color: "from-green-600 to-green-800",
   },
   {
-    icon: Workflow,
-    title: "Digital Transformation",
+    icon: Users, // Digital Marketing icon
+    title: "Digital Marketing",
     description:
-      "End-to-end digital transformation consulting to reimagine your business processes and technological infrastructure.",
+      "Strategic digital marketing solutions designed to grow your brand, connect with audiences, and drive results.",
     features: [
-      "Process Optimization",
-      "Technology Integration",
-      "Change Management",
+      "Social Media Campaigns",
+      "Pay-Per-Click Advertising",
+      "Content Marketing",
     ],
     color: "from-purple-600 to-purple-800",
   },
   {
-    icon: Users,
-    title: "Strategic Talent Acquisition",
+    icon: Shield, // Comprehensive IT Solutions icon
+    title: "Comprehensive IT Solutions",
     description:
-      "Sophisticated talent acquisition and management strategies to build high-performance, innovative teams.",
-    features: ["Executive Search", "Talent Mapping", "Strategic Recruitment"],
+      "Holistic IT services to streamline operations, enhance security, and support business innovation.",
+    features: [
+      "Managed IT Services",
+      "Infrastructure Optimization",
+      "IT Consulting",
+    ],
     color: "from-cyan-600 to-cyan-800",
   },
 ];
+
 
 const ProfessionalParticleBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);

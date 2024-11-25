@@ -4,7 +4,7 @@ import { useTheme } from "../../ThemeContext";
 const jobs = [
   {
     title: "Senior Full Stack Developer",
-    location: "Delhi, India",
+    location: "Remote",
     type: "Full-time",
     salary: "Based on experience",
     description:
@@ -20,7 +20,7 @@ const jobs = [
   },
   {
     title: "DevOps Engineer",
-    location: "Delhi, India",
+    location: "Remote",
     type: "Full-time",
     salary: "Based on experience",
     description:
@@ -106,16 +106,18 @@ export default function CareersPage() {
                     {job.description}
                   </p>
                 </div>
-                <button
-                  
+                <a
+                  href="https://forms.gle/kS1NK1o4dXkM6eabA"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors ${
                     theme === "light"
                       ? "bg-blue-600 text-white"
                       : "bg-blue-500 text-white"
-                    }`}
+                  }`}
                 >
                   Apply Now
-                </button>
+                </a>
               </div>
             </div>
           ))}
