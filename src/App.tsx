@@ -73,7 +73,7 @@ function App() {
           <Route path="/help" element={<HelpCenterPage />} />
           <Route path="/Contact" element={<ContactPage />} />
           <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
-          <Route path="/Terms" element={<TermsAndcondition />} />
+          <Route path="/terms" element={<TermsAndcondition />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />

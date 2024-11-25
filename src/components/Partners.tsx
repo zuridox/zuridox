@@ -1,4 +1,4 @@
-import React from 'react';
+
 import IBM from '../assets/ibm.png';
 import ORACLE from '../assets/oracle.png';
 import MICROSOFT from '../assets/microsoft.png';

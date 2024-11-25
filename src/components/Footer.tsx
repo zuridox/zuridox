@@ -27,7 +27,7 @@ const footerNavigation = {
     { name: "Contact Us", to: "/contact" },
   ],
   policy: [
-    { name: "Privacy Policy", to: "/privacy-policy" },
+    { name: "Privacy Policy", to: "/privacypolicy" },
     { name: "Terms & Conditions", to: "/terms" },
   ],
   social: [
