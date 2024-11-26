@@ -39,7 +39,7 @@ export default function ContactUsPage() {
           >
             <Mail className="w-10 h-10 text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Email Support</h3>
-            <p>zuridox@gmail.com</p>
+            <p>contact@zuridox.com</p>
           </div>
           <div
             className={`p-6 rounded-2xl shadow-sm ${
@@ -48,7 +48,7 @@ export default function ContactUsPage() {
           >
             <MapPin className="w-10 h-10 text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Our Address</h3>
-            <p>Badarpur , Delhi , india 110044</p>
+            <p>Jasola Vihar , Delhi , india 110025</p>
           </div>
         </div>
       </div>

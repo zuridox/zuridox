@@ -13,7 +13,7 @@ import {
 
 const services = [
   {
-    icon: Code2, // Web Development icon
+    icon: Code2,
     title: "Web Development",
     description:
       "Building responsive and dynamic websites tailored to your business needs, delivering exceptional user experiences.",
@@ -23,9 +23,10 @@ const services = [
       "Progressive Web Apps",
     ],
     color: "from-blue-600 to-blue-800",
+    link: "/WebDev", // Add link here
   },
   {
-    icon: Smartphone, // App Development icon
+    icon: Smartphone,
     title: "App Development",
     description:
       "Crafting high-quality, user-centric mobile applications to enhance engagement and streamline operations.",
@@ -35,9 +36,10 @@ const services = [
       "Custom App Ecosystems",
     ],
     color: "from-indigo-600 to-indigo-800",
+    link: "/appdev", // Add link here
   },
   {
-    icon: Workflow, // SEO icon
+    icon: Workflow,
     title: "Search Engine Optimization",
     description:
       "Boosting online visibility through proven SEO strategies to drive organic traffic and improve search rankings.",
@@ -47,9 +49,10 @@ const services = [
       "Content Strategy",
     ],
     color: "from-red-600 to-red-800",
+    link: "/seo", // Add link here
   },
   {
-    icon: Database, // Data Intelligence icon (unchanged)
+    icon: Database,
     title: "Data Intelligence",
     description:
       "Advanced data analytics and AI-driven insights to transform complex data into strategic business intelligence.",
@@ -59,9 +62,10 @@ const services = [
       "Predictive Modeling",
     ],
     color: "from-green-600 to-green-800",
+    link: "#", // Add link here
   },
   {
-    icon: Users, // Digital Marketing icon
+    icon: Users,
     title: "Digital Marketing",
     description:
       "Strategic digital marketing solutions designed to grow your brand, connect with audiences, and drive results.",
@@ -71,9 +75,10 @@ const services = [
       "Content Marketing",
     ],
     color: "from-purple-600 to-purple-800",
+    link: "/digitalmarketing", // Add link here
   },
   {
-    icon: Shield, // Comprehensive IT Solutions icon
+    icon: Shield,
     title: "Comprehensive IT Solutions",
     description:
       "Holistic IT services to streamline operations, enhance security, and support business innovation.",
@@ -83,8 +88,10 @@ const services = [
       "IT Consulting",
     ],
     color: "from-cyan-600 to-cyan-800",
+    link: "#", // Add link here
   },
 ];
+
 
 
 const ProfessionalParticleBackground: React.FC = () => {
@@ -199,28 +206,44 @@ const Services: React.FC = () => {
                 key={index}
                 onMouseEnter={() => setActiveService(index)}
                 onMouseLeave={() => setActiveService(null)}
-                className={`relative group cursor-pointer transition-all duration-500 ${isActive ? "scale-98" : "scale-95"}`}
+                className={`relative group cursor-pointer transition-all duration-500 ${
+                  isActive ? "scale-98" : "scale-95"
+                }`}
               >
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-20 rounded-2xl blur-2xl transition-opacity duration-500`}
                 />
                 <div
-                  className={`relative z-10 border border-gray-200 p-6 transform transition-all duration-500 rounded-2xl ${isActive ? "shadow-2xl" : "shadow-lg"} ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}`}
+                  className={`relative z-10 border border-gray-200 p-6 transform transition-all duration-500 rounded-2xl ${
+                    isActive ? "shadow-2xl" : "shadow-lg"
+                  } ${
+                    theme === "dark"
+                      ? "bg-gray-900 text-white"
+                      : "bg-white text-black"
+                  }`}
                 >
                   <div
-                    className={`mb-3 inline-block p-2 bg-gradient-to-br ${service.color} rounded-xl transition-transform duration-500 ${isActive ? "rotate-6 scale-110" : ""}`}
+                    className={`mb-3 inline-block p-2 bg-gradient-to-br ${
+                      service.color
+                    } rounded-xl transition-transform duration-500 ${
+                      isActive ? "rotate-6 scale-110" : ""
+                    }`}
                   >
                     <Icon className="w-6 h-6 text-white" />
                   </div>
 
                   <h3
-                    className={`text-lg font-semibold mb-3 ${theme === "dark" ? "text-white" : "text-black"}`}
+                    className={`text-lg font-semibold mb-3 ${
+                      theme === "dark" ? "text-white" : "text-black"
+                    }`}
                   >
                     {service.title}
                   </h3>
 
                   <p
-                    className={`text-gray-400 mb-3 leading-relaxed min-h-[70px] ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}
+                    className={`text-gray-400 mb-3 leading-relaxed min-h-[70px] ${
+                      theme === "dark" ? "text-gray-300" : "text-gray-700"
+                    }`}
                   >
                     {service.description}
                   </p>
@@ -229,7 +252,9 @@ const Services: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <div
                         key={featureIndex}
-                        className={`flex items-center text-sm ${theme === "dark" ? "text-gray-300" : "text-gray-600"} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                        className={`flex items-center text-sm ${
+                          theme === "dark" ? "text-gray-300" : "text-gray-600"
+                        } opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                       >
                         <span
                           className={`w-2 h-2 mr-3 rounded-full bg-gradient-to-br ${service.color}`}
@@ -240,14 +265,15 @@ const Services: React.FC = () => {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <button
+                    <a
+                      href={service.link}
                       className={`flex items-center gap-2 text-white font-semibold group/button hover:text-blue-400 transition-colors ${
                         theme === "light" ? "text-black" : "text-white"
                       }`}
                     >
                       Explore Service
                       <ArrowUpRight className="w-5 h-5 group-hover/button:translate-x-1 group-hover/button:-translate-y-1 transition-transform" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

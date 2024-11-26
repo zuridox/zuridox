@@ -88,7 +88,7 @@ export default function Footer() {
               >
                 <Mail className="w-5 h-5 group-hover:text-blue-400" />
                 <span className="group-hover:text-blue-400">
-                  zuridox@gmail.com
+                  contact@zuridox.com
                 </span>
               </a>
               <a
@@ -112,7 +112,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 group-hover:text-blue-400" />
                 <span className="hover:text-blue-400">
-                  Badarpur, New Delhi, India 110044
+                  Jasola Vihar , Delhi , india 110025
                 </span>
               </div>
             </div>

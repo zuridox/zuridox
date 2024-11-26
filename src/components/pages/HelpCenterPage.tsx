@@ -179,7 +179,7 @@ export default function HelpCenterPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold">Email Support</h3>
-                      <p>zuridox@gmail.com</p>
+                      <p>contact@zuridox.com</p>
                     </div>
                   </div>
                   <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">

@@ -129,7 +129,7 @@ export default function PrivacyPolicyPage() {
                 <div>
                   <Mail className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="font-bold">Email</h3>
-                  <p>zuridox@gmail.com</p>
+                  <p>contact@zuridox.com</p>
                 </div>
                 <div>
                   <Phone className="w-10 h-10 text-blue-600 mb-4" />
@@ -139,7 +139,7 @@ export default function PrivacyPolicyPage() {
                 <div>
                   <Shield className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="font-bold">Address</h3>
-                  <p>Badarpur , Delhi , india 110044</p>
+                  <p>Jasola Vihar , Delhi , india 110025</p>
                 </div>
               </div>
             </section>

@@ -35,7 +35,7 @@ const DigitalMarketingPage = () => {
         } text-black`}
       >
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">Digital Marketing</h1>
+          <h1 className="text-4xl font-bold mb-4 text-zinc-50">Digital Marketing</h1>
           <p className="text-xl">
             Driving Results with Data-Driven Digital Strategies
           </p>
