@@ -1,0 +1,50 @@
+/* General Page Styles */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+/* Hero Section Styles */
+.bg-gradient-to-r {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Swiper Custom Styles */
+.swiper {
+  padding: 0rem 0;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+.swiper-slide svg {
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover svg {
+  transform: scale(1.2);
+}
+
+/* Text Styling */
+.text-center h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.text-center p {
+  font-size: 1.125rem;
+  color: gray;
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+  .swiper-slide svg {
+    font-size: 4rem;
+  }
+}

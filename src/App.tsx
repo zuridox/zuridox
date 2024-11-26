@@ -27,6 +27,10 @@ import ContactPage from "./components/pages/contactPage";
 import PrivacyPolicyPage from "./components/pages/PrivacyPage";
 import TermsAndcondition from "./components/pages/TermsandCon";
 import PageNotFound from "./components/pages/PageNotFound";
+import WebDevelopmentPage from "./components/pages/Service/WebDevPage";
+import MobileAppDevelopmentPage from "./components/pages/Service/AppDevPage";
+import SearchEngineOptimizationPage from "./components/pages/Service/SEOPage";
+import DigitalMarketingPage from "./components/pages/Service/DigitalmarkPage";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -75,6 +79,10 @@ function App() {
           <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsAndcondition />} />
           <Route path="*" element={<PageNotFound />} />
+          <Route path="/webdev" element={<WebDevelopmentPage />} />
+          <Route path="/appdev" element={<MobileAppDevelopmentPage />} />
+          <Route path="/seo" element={<SearchEngineOptimizationPage />} />
+          <Route path="/digitalmarketing" element={<DigitalMarketingPage />} />
         </Routes>
         <Footer />
       </div>

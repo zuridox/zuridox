@@ -13,10 +13,10 @@ import LogoDark from "../assets/Zuridox-Logo.png"; // Dark theme logo
 
 const footerNavigation = {
   solutions: [
-    { name: "Web Development", to: "#" },
-    { name: "App Development", to: "#" },
-    { name: "search Engine Optimization", to: "#" },
-    { name: "Digital Marketing", to: "#" },
+    { name: "Web Development", to: "/WebDev" },
+    { name: "App Development", to: "/appdev" },
+    { name: "search Engine Optimization", to: "/seo" },
+    { name: "Digital Marketing", to: "/digitalmarketing" },
     { name: "Comprehensive IT Consulting", to: "#" },
   ],
   company: [
