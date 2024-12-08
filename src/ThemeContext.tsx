@@ -12,16 +12,28 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
+
+    // Sync with system preferences only if theme is not manually set
+    if (!localStorage.getItem('theme')) {
       setTheme(mediaQuery.matches ? 'dark' : 'light');
+    }
+
+    const handleChange = () => {
+      if (!localStorage.getItem('theme')) {
+        setTheme(mediaQuery.matches ? 'dark' : 'light');
+      }
     };
 
-    // Sync with system preferences
-    setTheme(mediaQuery.matches ? 'dark' : 'light');
     mediaQuery.addEventListener('change', handleChange);
 
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
+
+  useEffect(() => {
+    // Update localStorage whenever theme changes
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
