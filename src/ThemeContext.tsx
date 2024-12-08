@@ -8,9 +8,7 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>(() =>
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  );
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark'); // Default to 'dark'
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -18,7 +16,10 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       setTheme(mediaQuery.matches ? 'dark' : 'light');
     };
 
+    // Sync with system preferences
+    setTheme(mediaQuery.matches ? 'dark' : 'light');
     mediaQuery.addEventListener('change', handleChange);
+
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 

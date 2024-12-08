@@ -1,15 +1,34 @@
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { useTheme } from "../ThemeContext";
-import HeroIMG from "../assets/3129902-uhd_2560_1440_25fps.mp4";
-import HeroIMG2 from "../assets/dark.mp4";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { quality, format } from "@cloudinary/url-gen/actions/delivery";
 
 export default function Hero() {
   const { theme } = useTheme();
 
+  // Initialize Cloudinary instance
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dt3knhpub", // Replace with your Cloudinary cloud name
+    },
+  });
+
+  // Apply transformations for optimization
+  const optimizedVideo = (videoId: string) =>
+    cld
+      .video(videoId)
+      .delivery(format("auto")) // Auto-detect best format (e.g., MP4, WebM)
+      .delivery(quality("auto")) // Optimize quality for network speed
+      .toURL();
+
+  const heroVideo = theme === "light"
+    ? optimizedVideo("dark_2_gt1qew")
+    : optimizedVideo("light_2_kuusio");
+
   const handleScrollToServices = () => {
-    const servicesSection = document.getElementById("services"); // Get the Services section by ID
+    const servicesSection = document.getElementById("services");
     if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: "smooth" }); // Smoothly scroll to the Services section
+      servicesSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -19,7 +38,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <video
           className="h-full w-full object-cover"
-          src={theme === "light" ? HeroIMG2 : HeroIMG} // Conditionally load video based on theme
+          src={heroVideo} // Cloudinary-optimized URL
           autoPlay
           muted
           loop
