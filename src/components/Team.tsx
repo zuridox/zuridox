@@ -1,7 +1,7 @@
-import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail } from 'lucide-react';
 import { useTheme } from '../ThemeContext'; // Assuming you have this hook or context
 import Ashar from "../assets/Team/ashar.jpg";
-import Savez from "../assets/Team/portfolio photo.jpg";
+import Savez from "../assets/Team/Savez.png";
 import Farhan from "../assets/Team/farhan.jpg";
 
 const team = [
@@ -12,8 +12,8 @@ const team = [
     image: Farhan,
     bio: "With 3+ years in IT consulting, Farhan leads Zuridox's vision and strategy.",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/mdfarhanraza/",
+      Github: "https://github.com/CodingBlow",
       email: "farhan@zuridox.com",
     },
   },
@@ -24,9 +24,9 @@ const team = [
     image: Savez,
     bio: "Savez brings deep technical expertise and innovation leadership to our solutions.",
     social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "savez@zuridox.com",
+      linkedin: "https://www.linkedin.com/in/mo-savez/",
+      Github: "https://github.com/savez2223",
+      email: "mosavez0786@gmail.com",
     },
   },
   {
@@ -36,8 +36,8 @@ const team = [
     image: Ashar,
     bio: "Ashhar oversees all development projects and ensures technical excellence.",
     social: {
-      linkedin: "#",
-      twitter: "#",
+      linkedin: "https://www.linkedin.com/in/ashhar-jamali-5322642a4/",
+      Github: "https://github.com/asharjamali",
       email: "Ashhar@zuridox.com",
     },
   },
@@ -84,10 +84,10 @@ export default function Team() {
                           <Linkedin className="w-5 h-5 text-white" />
                         </a>
                         <a
-                          href={member.social.twitter}
+                          href={member.social.Github}
                           className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
                         >
-                          <Twitter className="w-5 h-5 text-white" />
+                          <Github className="w-5 h-5 text-white" />
                         </a>
                         <a
                           href={`mailto:${member.social.email}`}

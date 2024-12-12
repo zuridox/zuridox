@@ -28,15 +28,17 @@ const WebDevelopmentPage = () => {
 
   return (
     <div
-      className={`min-h-screen bg-${
-        theme === "light" ? "white" : "gray-900"
-      } text-${theme === "light" ? "black" : "white"}`}
+      className={`pt-20 ${
+        theme === "dark"
+          ? "bg-gray-900 text-white"
+          : "bg-gray-100 text-gray-900"
+      }`}
     >
       {/* Hero Section */}
       <div
         className={`py-16 ${
           theme === "dark"
-            ? "bg-gradient-to-r from-gray-800 to-gray-700"
+            ? "bg-gradient-to-r from-blue-900 to-blue-700"
             : "bg-gradient-to-r from-blue-900 to-blue-700"
         } text-white`}
       >

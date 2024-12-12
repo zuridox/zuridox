@@ -22,20 +22,24 @@ const DigitalMarketingPage = () => {
 
   return (
     <div
-      className={`min-h-screen bg-${
-        theme === "light" ? "white" : "gray-900"
-      } text-${theme === "light" ? "black" : "white"}`}
+      className={`pt-20 ${
+        theme === "dark"
+          ? "bg-gray-900 text-white"
+          : "bg-gray-100 text-gray-900"
+      }`}
     >
       {/* Hero Section */}
       <div
         className={`py-16 ${
           theme === "dark"
-            ? "bg-gradient-to-r from-black-800 to-black-600"
-            : "bg-gradient-to-r from-white-600 to-white-400"
+            ? "bg-gradient-to-r from-blue-900 to-blue-700"
+            : "bg-gradient-to-r from-blue-900 to-blue-700"
         } text-black`}
       >
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4 text-zinc-50">Digital Marketing</h1>
+          <h1 className="text-4xl font-bold mb-4 text-zinc-50">
+            Digital Marketing
+          </h1>
           <p className="text-xl">
             Driving Results with Data-Driven Digital Strategies
           </p>

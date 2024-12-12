@@ -267,7 +267,7 @@ const Services: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <a
                       href={service.link}
-                      className={`flex items-center gap-2 text-white font-semibold group/button hover:text-blue-400 transition-colors ${
+                      className={`flex items-center gap-2 text-black font-semibold group/button hover:text-blue-400 transition-colors ${
                         theme === "light" ? "text-black" : "text-white"
                       }`}
                     >
