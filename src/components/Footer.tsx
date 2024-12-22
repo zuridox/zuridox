@@ -22,6 +22,7 @@ const footerNavigation = {
   company: [
     { name: "About Us", to: "/about" },
     { name: "Case Studies", to: "/case-studies" },
+    { name: "Blog", to: "/blog" },
     { name: "Strategic Partners", to: "/partners" },
     { name: "Careers", to: "/careers" },
     { name: "Contact Us", to: "/contact" },

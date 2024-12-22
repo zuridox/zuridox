@@ -18,7 +18,6 @@ import AboutPage from "./components/pages/AboutPage";
 import CareersPage from "./components/pages/CareersPage";
 import PartnersPage from "./components/pages/PartnersPage";
 import NewsPage from "./components/pages/NewsPage";
-import BlogPage from "./components/pages/BlogPage";
 import CaseStudiesPage from "./components/pages/CaseStudiesPage";
 import EventsPage from "./components/pages/EventsPage";
 import HelpCenterPage from "./components/pages/HelpCenterPage";
@@ -31,6 +30,8 @@ import WebDevelopmentPage from "./components/pages/Service/WebDevPage";
 import MobileAppDevelopmentPage from "./components/pages/Service/AppDevPage";
 import SearchEngineOptimizationPage from "./components/pages/Service/SEOPage";
 import DigitalMarketingPage from "./components/pages/Service/DigitalmarkPage";
+import Blog from "./components/pages/Blog";
+import Post from "./components/pages/Post";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -71,7 +72,6 @@ function App() {
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/partners" element={<PartnersPage />} />
           <Route path="/news" element={<NewsPage />} />
-          <Route path="/blog" element={<BlogPage />} />
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/help" element={<HelpCenterPage />} />
@@ -83,6 +83,8 @@ function App() {
           <Route path="/appdev" element={<MobileAppDevelopmentPage />} />
           <Route path="/seo" element={<SearchEngineOptimizationPage />} />
           <Route path="/digitalmarketing" element={<DigitalMarketingPage />} />
+          <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<Post />} />
         </Routes>
         <Footer />
       </div>
