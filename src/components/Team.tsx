@@ -2,7 +2,7 @@ import { Linkedin, Github, Mail } from 'lucide-react';
 import { useTheme } from '../ThemeContext'; // Assuming you have this hook or context
 import Ashar from "../assets/Team/ashar.jpg";
 import Savez from "../assets/Team/Savez1.png";
-import Farhan from "../assets/Team/farhan.jpg";
+import Farhan from "../assets/Team/farhan raza.png";
 
 const team = [
   {
