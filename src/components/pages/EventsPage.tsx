@@ -1,44 +1,58 @@
 import { Calendar, MapPin, Users, ExternalLink } from "lucide-react";
 import { useTheme } from "../../ThemeContext";
+import { useMemo } from "react";
 
-const events = [
-  {
-    title: "Tech Innovation Summit 2024",
-    date: "April 15-16, 2024",
-    location: "San Francisco, CA",
-    type: "Conference",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-    description:
-      "Join industry leaders for two days of insights into emerging technologies and digital transformation.",
-    attendees: "500+ Expected",
-  },
-  {
-    title: "Digital Transformation Workshop",
-    date: "April 20, 2024",
-    location: "Virtual Event",
-    type: "Workshop",
-    image:
-      "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800",
-    description:
-      "Hands-on workshop focusing on practical strategies for digital transformation.",
-    attendees: "200+ Expected",
-  },
-  {
-    title: "Cloud Computing Masterclass",
-    date: "May 5, 2024",
-    location: "New York, NY",
-    type: "Training",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
-    description:
-      "Deep dive into cloud architecture and implementation strategies.",
-    attendees: "150+ Expected",
-  },
-];
+const generateEvents = () => {
+  const today = new Date();
+  
+  return [
+    {
+      title: "Tech Innovation Summit 2024",
+      date: new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000), // 1 week ahead
+      location: "San Francisco, CA",
+      type: "Conference",
+      image:
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
+      description:
+        "Join industry leaders for two days of insights into emerging technologies and digital transformation.",
+      attendees: "500+ Expected",
+    },
+    {
+      title: "Digital Transformation Workshop",
+      date: new Date(today.getTime() + 14 * 24 * 60 * 60 * 1000), // 2 weeks ahead
+      location: "Virtual Event",
+      type: "Workshop",
+      image:
+        "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800",
+      description:
+        "Hands-on workshop focusing on practical strategies for digital transformation.",
+      attendees: "200+ Expected",
+    },
+    {
+      title: "Cloud Computing Masterclass",
+      date: new Date(today.getTime() + 30 * 24 * 60 * 60 * 1000), // 1 month ahead
+      location: "New York, NY",
+      type: "Training",
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
+      description:
+        "Deep dive into cloud architecture and implementation strategies.",
+      attendees: "150+ Expected",
+    },
+  ];
+};
 
 export default function EventsPage() {
   const { theme } = useTheme();
+  const events = useMemo(() => generateEvents(), []);
+
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
 
   return (
     <div
@@ -87,7 +101,7 @@ export default function EventsPage() {
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
-                    <span>{event.date}</span>
+                    <span>{formatDate(event.date)}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4" />

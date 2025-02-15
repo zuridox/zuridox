@@ -5,8 +5,6 @@ const testimonials = [
   {
     name: "Aisha Khan",
     role: "Owner, Khan Boutique",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
     content:
       "Zuridox helped us set up an e-commerce platform that doubled our customer base in just a few months. Highly recommended!",
     rating: 5,
@@ -14,8 +12,6 @@ const testimonials = [
   {
     name: "Sameer Malik",
     role: "Manager, Malik Auto Works",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200",
     content:
       "Their solutions modernized our operations and significantly improved our service efficiency. A truly transformative experience!",
     rating: 5,
@@ -23,8 +19,6 @@ const testimonials = [
   {
     name: "Priya Verma",
     role: "Principal, Little Stars Academy",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200",
     content:
       "The team at Zuridox developed an interactive platform for our school, enhancing communication with parents and students alike.",
     rating: 5,
@@ -78,32 +72,25 @@ export default function Testimonials() {
                 } group-hover:text-white/20`}
               />
 
-              <div className="flex items-center gap-4 mb-6">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div>
-                  <h3
-                    className={`font-semibold ${
-                      theme === "dark"
-                        ? "text-white"
-                        : "text-gray-900"
-                    } group-hover:text-white`}
-                  >
-                    {testimonial.name}
-                  </h3>
-                  <p
-                    className={`text-gray-400 ${
-                      theme === "dark"
-                        ? "group-hover:text-white/80"
-                        : "group-hover:text-gray-600"
-                    }`}
-                  >
-                    {testimonial.role}
-                  </p>
-                </div>
+              <div className="mb-6">
+                <h3
+                  className={`font-semibold ${
+                    theme === "dark"
+                      ? "text-white"
+                      : "text-gray-900"
+                  } group-hover:text-white`}
+                >
+                  {testimonial.name}
+                </h3>
+                <p
+                  className={`text-gray-400 ${
+                    theme === "dark"
+                      ? "group-hover:text-white/80"
+                      : "group-hover:text-gray-600"
+                  }`}
+                >
+                  {testimonial.role}
+                </p>
               </div>
 
               <div className="flex mb-4">
