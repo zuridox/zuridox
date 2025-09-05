@@ -92,8 +92,6 @@ const services = [
   },
 ];
 
-
-
 const ProfessionalParticleBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -175,20 +173,27 @@ const Services: React.FC = () => {
   const [activeService, setActiveService] = useState<number | null>(null);
 
   return (
-    <section id="services"
-      className={`relative py-28 ${theme === "dark" ? "bg-gray-950" : "bg-white"} overflow-hidden`}
+    <section
+      id="services"
+      className={`relative py-28 ${
+        theme === "dark" ? "bg-gray-950" : "bg-white"
+      } overflow-hidden`}
     >
       <ProfessionalParticleBackground />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
           <h2
-            className={`text-5xl font-extrabold ${theme === "dark" ? "text-white" : "text-black"} mb-6 tracking-tight`}
+            className={`text-5xl font-extrabold ${
+              theme === "dark" ? "text-white" : "text-black"
+            } mb-6 tracking-tight`}
           >
             Enterprise Technology Solutions
           </h2>
           <p
-            className={`text-xl ${theme === "dark" ? "text-gray-300" : "text-gray-700"} max-w-4xl mx-auto`}
+            className={`text-xl ${
+              theme === "dark" ? "text-gray-300" : "text-gray-700"
+            } max-w-4xl mx-auto`}
           >
             Empowering organizations with cutting-edge technological
             innovations, strategic insights, and transformative digital
@@ -254,7 +259,7 @@ const Services: React.FC = () => {
                         key={featureIndex}
                         className={`flex items-center text-sm ${
                           theme === "dark" ? "text-gray-300" : "text-gray-600"
-                        } opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                        }`}
                       >
                         <span
                           className={`w-2 h-2 mr-3 rounded-full bg-gradient-to-br ${service.color}`}
