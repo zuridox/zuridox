@@ -39,7 +39,7 @@ export default function AboutPage() {
     >
       {/* Hero Section */}
       <div
-        className={`py-16 ${
+        className={`py-7 ${
           theme === "dark"
             ? "bg-gradient-to-r from-blue-800 to-blue-700"
             : "bg-gradient-to-r from-blue-800 to-blue-700"
