@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import {
-//   FaReact,
+  //   FaReact,
   FaNode,
   FaApple,
   FaAndroid,
@@ -13,7 +13,7 @@ import {
   FaDocker,
   FaJava,
   FaShoppingCart,
-//   FaFilter,
+  //   FaFilter,
   FaSwift,
   FaGit,
 } from "react-icons/fa";
@@ -34,7 +34,7 @@ const AppDevelopmentPage = () => {
     >
       {/* Hero Section */}
       <div
-        className={`py-16 ${
+        className={`py-7 ${
           theme === "dark"
             ? "bg-gradient-to-r from-blue-900 to-blue-700"
             : "bg-gradient-to-r from-blue-900 to-blue-700"

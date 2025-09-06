@@ -17,7 +17,7 @@ const footerNavigation = {
     { name: "App Development", to: "/appdev" },
     { name: "search Engine Optimization", to: "/seo" },
     { name: "Digital Marketing", to: "/digitalmarketing" },
-    { name: "Comprehensive IT Consulting", to: "#" },
+    // { name: "Comprehensive IT Consulting", to: "#" },
   ],
   company: [
     { name: "About Us", to: "/about" },
@@ -56,7 +56,9 @@ export default function Footer() {
   return (
     <footer
       className={`border-t ${
-        theme === "light" ? "border-gray-300 bg-gray-100 text-gray-900" : "border-gray-800 bg-gray-900 text-white"
+        theme === "light"
+          ? "border-gray-300 bg-gray-100 text-gray-900"
+          : "border-gray-800 bg-gray-900 text-white"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-20">
@@ -70,19 +72,33 @@ export default function Footer() {
                 className="h-12 mb-6 max-w-full"
               />
             </Link>
-            <p className={`mb-8 text-lg leading-relaxed max-w-md ${theme === "dark" ? "text-gray-300" : "text-gray-700"}`}>
-              Transforming businesses through innovative technology solutions. Your trusted partner in digital excellence and IT consulting.
+            <p
+              className={`mb-8 text-lg leading-relaxed max-w-md ${
+                theme === "dark" ? "text-gray-300" : "text-gray-700"
+              }`}
+            >
+              Transforming businesses through innovative technology solutions.
+              Your trusted partner in digital excellence and IT consulting.
             </p>
             <div className="space-y-4">
-              <a href="mailto:contact@zuridox.com" className="flex items-center space-x-3 hover:text-blue-400 transition-colors group">
+              <a
+                href="mailto:contact@zuridox.com"
+                className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
+              >
                 <Mail className="w-5 h-5 group-hover:text-blue-400" />
                 <span>contact@zuridox.com</span>
               </a>
-              <a href="tel:+919389678954" className="flex items-center space-x-3 hover:text-blue-400 transition-colors group">
+              <a
+                href="tel:+919389678954"
+                className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
+              >
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
                 <span>+91 9389678954</span>
               </a>
-              <a href="tel:+917050068050" className="flex items-center space-x-3 hover:text-blue-400 transition-colors group">
+              <a
+                href="tel:+917050068050"
+                className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
+              >
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
                 <span>+91 7050068050</span>
               </a>
@@ -100,13 +116,20 @@ export default function Footer() {
             Policy: footerNavigation.policy,
           }).map(([title, items]) => (
             <div key={title}>
-              <h3 className={`text-sm font-semibold tracking-wider uppercase mb-6 ${theme === "dark" ? "text-blue-400" : "text-blue-500"}`}>
+              <h3
+                className={`text-sm font-semibold tracking-wider uppercase mb-6 ${
+                  theme === "dark" ? "text-blue-400" : "text-blue-500"
+                }`}
+              >
                 {title}
               </h3>
               <ul className="space-y-4">
                 {items.map((item) => (
                   <li key={item.name}>
-                    <Link to={item.to} className="text-sm hover:text-blue-400 transition-colors">
+                    <Link
+                      to={item.to}
+                      className="text-sm hover:text-blue-400 transition-colors"
+                    >
                       {item.name}
                     </Link>
                   </li>
@@ -123,14 +146,21 @@ export default function Footer() {
               {footerNavigation.social.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <a key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-blue-400 transition-colors"
+                  >
                     <Icon className="h-6 w-6" />
                   </a>
                 );
               })}
             </div>
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Zuridox Technologies. All rights reserved.
+              © {new Date().getFullYear()} Zuridox Technologies. All rights
+              reserved.
             </p>
           </div>
         </div>

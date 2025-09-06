@@ -5,7 +5,7 @@ import { BlogPost } from "../../types";
 import { useTheme } from "../../ThemeContext"; // Assuming you have a ThemeContext
 
 const Post: React.FC = () => {
-  const { slug } = useParams<{ slug: string }>();  // Type the slug
+  const { slug } = useParams<{ slug: string }>(); // Type the slug
   const { theme } = useTheme(); // Get the current theme from context
   const post = blogData.find((p: BlogPost) => p.slug === slug);
 
@@ -15,15 +15,21 @@ const Post: React.FC = () => {
 
   return (
     <div
-      className={`mx-auto px-6 py-10 sm:px-10 lg:px-20 pt-28 ${theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-50 text-gray-900"}`}
+      className={`mx-auto px-6 py-10 sm:px-10 lg:px-20 pt-28 ${
+        theme === "dark" ? "bg-gray-900 text-white" : "bg-gray-50 text-gray-900"
+      }`}
     >
       <h1
-        className={`text-4xl font-extrabold ${theme === "dark" ? "text-white" : "text-gray-900"} mb-6`}
+        className={`text-4xl font-extrabold ${
+          theme === "dark" ? "text-white" : "text-gray-900"
+        } mb-6`}
       >
         {post.title}
       </h1>
       <p
-        className={`text-sm mb-6 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}
+        className={`text-sm mb-6 ${
+          theme === "dark" ? "text-gray-400" : "text-gray-600"
+        }`}
       >
         Published on {post.date} by {post.author}
       </p>
@@ -35,7 +41,9 @@ const Post: React.FC = () => {
         />
       </div>
       <div
-        className={`prose prose-lg ${theme === "dark" ? "prose-invert" : "prose-dark"} max-w-none`}
+        className={`prose prose-lg ${
+          theme === "dark" ? "prose-invert" : "prose-dark"
+        } max-w-none`}
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </div>

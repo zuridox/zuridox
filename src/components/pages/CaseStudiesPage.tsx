@@ -1,4 +1,3 @@
-
 import { ArrowUpRight, Building2 } from "lucide-react";
 import { useTheme } from "../../ThemeContext";
 
@@ -60,7 +59,7 @@ export default function CaseStudiesPage() {
     >
       {/* Hero Section */}
       <div
-        className={`py-16 ${
+        className={`py-7 ${
           theme === "dark"
             ? "bg-gradient-to-r from-blue-900 to-blue-700"
             : "bg-gradient-to-r from-blue-900 to-blue-700"

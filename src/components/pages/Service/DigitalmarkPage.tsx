@@ -14,7 +14,8 @@ import {
   FaChartBar,
   FaLinkedin,
   FaYoutube,
-} from "react-icons/fa";import { useTheme } from "../../../ThemeContext";
+} from "react-icons/fa";
+import { useTheme } from "../../../ThemeContext";
 import { Link } from "react-router-dom";
 
 const DigitalMarketingPage = () => {
@@ -30,7 +31,7 @@ const DigitalMarketingPage = () => {
     >
       {/* Hero Section */}
       <div
-        className={`py-16 ${
+        className={`py-7 ${
           theme === "dark"
             ? "bg-gradient-to-r from-blue-900 to-blue-700"
             : "bg-gradient-to-r from-blue-900 to-blue-700"

@@ -48,7 +48,7 @@ export default function CareersPage() {
     <div className={`pt-20 ${backgroundColor}`}>
       {/* Hero Section */}
       <div
-        className={`bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 ${
+        className={`bg-gradient-to-r from-blue-900 to-blue-700 text-white py-7 ${
           theme === "dark"
             ? "dark:bg-gradient-to-r dark:from-blue-700 dark:to-blue-500"
             : ""

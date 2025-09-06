@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, Moon, Sun } from "lucide-react";
 import { useTheme } from "../ThemeContext";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import LogoLight from "../assets/Light-theme-Logo1.png"; // Light theme logo
-import LogoDark from "../assets/Zuridox-Logo.png"; // Dark theme logo
+import { Link } from "react-router-dom";
+import LogoLight from "../assets/Light-theme-Logo1.png";
+import LogoDark from "../assets/Zuridox-Logo.png";
 
 const navigation = [
   { name: "Home", to: "/" },
@@ -15,7 +15,6 @@ const navigation = [
       { name: "App Development", to: "/appdev" },
       { name: "search Engine Optimization", to: "/seo" },
       { name: "Digital Marketing", to: "/digitalmarketing" },
-      { name: "Comprehensive IT Consulting", to: "#" },
     ],
   },
   { name: "About", to: "/about" },
@@ -26,7 +25,7 @@ const navigation = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [_isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { theme, setTheme } = useTheme();
 
@@ -34,7 +33,6 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -43,18 +41,25 @@ export default function Header() {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
 
-  // Determine the text color based on the theme
   const textColorClass = theme === "light" ? "text-black" : "text-white";
 
   return (
-    <header className="fixed w-full z-50 transition-all duration-300 bg-transparent">
+    <header
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? theme === "light"
+            ? "bg-white/30 backdrop-blur-xl"
+            : "bg-gray-950/30 backdrop-blur-xl"
+          : "bg-transparent"
+      }`}
+    >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/">
               <img
-                src={theme === "light" ? LogoLight : LogoDark} // Conditionally set logo
+                src={theme === "light" ? LogoLight : LogoDark}
                 alt="Logo"
                 className="h-8 sm:h-10"
               />
@@ -67,7 +72,14 @@ export default function Header() {
               <div key={item.name} className="relative group">
                 {item.children ? (
                   <button
-                    className={`flex items-center space-x-1 px-4 py-2 text-sm font-bold rounded-full transition-all duration-300 ${textColorClass} hover:text-white`}
+                    className={`flex items-center space-x-1 px-4 py-2 text-sm font-bold rounded-full
+                    ${textColorClass}
+                    transition-all duration-300
+                    hover:text-blue-600 
+                    hover:bg-blue-100 
+                    hover:scale-105 
+                    hover:shadow-lg
+                    `}
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
@@ -77,7 +89,14 @@ export default function Header() {
                 ) : (
                   <Link
                     to={item.to}
-                    className={`px-4 py-2 text-sm font-bold rounded-full transition-all duration-300 ${textColorClass} hover:text-white`}
+                    className={`px-4 py-2 text-sm font-bold rounded-full
+                      ${textColorClass}
+                      transition-all duration-300
+                      hover:text-blue-600
+                      hover:bg-blue-100
+                      hover:scale-105
+                      hover:shadow-lg
+                    `}
                   >
                     {item.name}
                   </Link>
@@ -99,7 +118,13 @@ export default function Header() {
                         <Link
                           key={child.name}
                           to={child.to}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          className="block px-4 py-2 text-sm text-gray-700 rounded-lg
+                            transition-all duration-300
+                            hover:text-blue-600
+                            hover:bg-blue-100
+                            hover:scale-105
+                            hover:shadow-sm
+                          "
                         >
                           {child.name}
                         </Link>
@@ -110,8 +135,8 @@ export default function Header() {
               </div>
             ))}
 
-            {/* Dark/Light Theme Toggle */}
-            <button
+            {/* Desktop Theme Toggle Button (optional) */}
+            {/* <button
               onClick={toggleTheme}
               className="ml-4 p-2 text-black bg-yellow-400 rounded-full shadow-lg transition-all duration-300 transform scale-75 opacity-80 hover:opacity-100 hover:scale-100 focus:opacity-100 focus:scale-100"
               aria-label="Toggle Theme"
@@ -121,7 +146,7 @@ export default function Header() {
               ) : (
                 <Sun className="w-5 h-5" />
               )}
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -166,8 +191,14 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.to}
-                onClick={() => setIsMenuOpen(false)} // Close menu on link click
-                className={`block px-4 py-2 text-base font-bold text-gray-900 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors`}
+                onClick={() => setIsMenuOpen(false)}
+                className={`block px-4 py-2 text-base font-bold text-gray-900 rounded-lg
+                  transition-all duration-300
+                  hover:text-blue-600
+                  hover:bg-blue-100
+                  hover:scale-105
+                  hover:shadow-lg
+                `}
               >
                 {item.name}
               </Link>
