@@ -3,21 +3,21 @@ import { useTheme } from "../ThemeContext";
 
 const testimonials = [
   {
-    name: "Aisha Khan",
-    role: "Owner, Khan Boutique",
+    name: "Carrol Downey",
+    role: "Owner, outique",
     content:
       "Zuridox helped us set up an e-commerce platform that doubled our customer base in just a few months. Highly recommended!",
     rating: 5,
   },
   {
-    name: "Sameer Malik",
-    role: "Manager, Malik Auto Works",
+    name: "Bruce",
+    role: "Manager, Bruce Auto Works",
     content:
       "Their solutions modernized our operations and significantly improved our service efficiency. A truly transformative experience!",
     rating: 5,
   },
   {
-    name: "Priya Verma",
+    name: "Adwin Hayes",
     role: "Principal, Little Stars Academy",
     content:
       "The team at Zuridox developed an interactive platform for our school, enhancing communication with parents and students alike.",
@@ -66,18 +66,14 @@ export default function Testimonials() {
             >
               <Quote
                 className={`absolute top-6 right-6 w-10 h-10 ${
-                  theme === "dark"
-                    ? "text-blue-100"
-                    : "text-gray-900"
+                  theme === "dark" ? "text-blue-100" : "text-gray-900"
                 } group-hover:text-white/20`}
               />
 
               <div className="mb-6">
                 <h3
                   className={`font-semibold ${
-                    theme === "dark"
-                      ? "text-white"
-                      : "text-gray-900"
+                    theme === "dark" ? "text-white" : "text-gray-900"
                   } group-hover:text-white`}
                 >
                   {testimonial.name}
@@ -98,9 +94,7 @@ export default function Testimonials() {
                   <Star
                     key={i}
                     className={`w-5 h-5 fill-current ${
-                      theme === "dark"
-                        ? "text-yellow-400"
-                        : "text-yellow-500"
+                      theme === "dark" ? "text-yellow-400" : "text-yellow-500"
                     } group-hover:text-yellow-300`}
                   />
                 ))}

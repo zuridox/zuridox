@@ -30,7 +30,7 @@ export default function ContactUsPage() {
           >
             <Phone className="w-10 h-10 text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Phone Support</h3>
-            <p>+91-9389678954</p>
+            <p>+1 7602740909</p>
           </div>
           <div
             className={`p-6 rounded-2xl shadow-sm ${
@@ -41,7 +41,7 @@ export default function ContactUsPage() {
             <h3 className="text-xl font-bold mb-2">Email Support</h3>
             <p>contact@zuridox.com</p>
           </div>
-          <div
+          {/* <div
             className={`p-6 rounded-2xl shadow-sm ${
               theme === "light" ? "bg-white" : "bg-gray-800"
             }`}
@@ -49,7 +49,7 @@ export default function ContactUsPage() {
             <MapPin className="w-10 h-10 text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Our Address</h3>
             <p>Jasola Vihar , Delhi , india 110025</p>
-          </div>
+          </div> */}
         </div>
       </div>
 

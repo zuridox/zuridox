@@ -595,13 +595,13 @@ export default function TermsAndConditionsPage() {
                 <div>
                   <Phone className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="font-bold">Phone</h3>
-                  <p>+91-9389678954</p>
+                  <p>+1 7602740909</p>
                 </div>
-                <div>
+                {/* <div>
                   <Shield className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="font-bold">Address</h3>
                   <p>Jasola Vihar , Delhi , india 110025</p>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>

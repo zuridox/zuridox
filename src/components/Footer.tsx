@@ -35,17 +35,17 @@ const footerNavigation = {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "https://www.linkedin.com/company/zuridox",
+      href: "#",
     },
     {
       name: "Facebook",
       icon: Facebook,
-      href: "https://www.facebook.com/zuridox",
+      href: "#",
     },
     {
       name: "Instagram",
       icon: Instagram,
-      href: "https://www.instagram.com/zuridox",
+      href: "#",
     },
   ],
 };
@@ -89,23 +89,23 @@ export default function Footer() {
                 <span>contact@zuridox.com</span>
               </a>
               <a
-                href="tel:+919389678954"
+                href="tel:+17602740909"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
               >
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
-                <span>+91 9389678954</span>
+                <span>+1 7602740909</span>
               </a>
-              <a
+              {/* <a
                 href="tel:+917050068050"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
               >
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
                 <span>+91 7050068050</span>
-              </a>
-              <div className="flex items-center space-x-3">
+              </a> */}
+              {/* <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5" />
                 <span>Jasola Vihar, Delhi, India 110025</span>
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -137,7 +137,7 @@ export default function AboutPage() {
       </div>
 
       {/* Founders Section */}
-      <div className={`py-16 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}>
+      {/* <div className={`py-16 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}>
         <div className="max-w-7xl mx-auto px-4">
           <h2
             className={`text-3xl font-bold text-center mb-12 ${
@@ -185,7 +185,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

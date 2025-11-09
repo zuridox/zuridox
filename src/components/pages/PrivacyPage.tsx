@@ -86,8 +86,7 @@ export default function PrivacyPolicyPage() {
                 If after you opt-in, you change your mind, you may withdraw your
                 consent for us to contact you, for the continued collection, use
                 or disclosure of your information, at anytime, by contacting us
-                at contact@zuridox.com or mailing us at: Jasola Vihar , Delhi ,
-                india 110025
+                at contact@zuridox.com
               </p>
             </section>
 
@@ -243,8 +242,7 @@ export default function PrivacyPolicyPage() {
                 If you would like to: access, correct, amend or delete any
                 personal information we have about you, register a complaint, or
                 simply want more information contact our Privacy Compliance
-                Officer at contact@zuridox.com or by mail at Jasola Vihar ,
-                Delhi , india 110025
+                Officer at contact@zuridox.com or
               </p>
             </section>
 
@@ -260,13 +258,13 @@ export default function PrivacyPolicyPage() {
                 <div>
                   <Phone className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="font-bold">Phone</h3>
-                  <p>+91-9389678954</p>
+                  <p>+1 7602740909</p>
                 </div>
-                <div>
+                {/* <div>
                   <Shield className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="font-bold">Address</h3>
                   <p>Jasola Vihar , Delhi , india 110025</p>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>

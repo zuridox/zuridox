@@ -23,7 +23,7 @@ const blogData: BlogPost[] = [
 
       In this dynamic environment, Zuridox applies cutting-edge AI solutions—from advanced analytics dashboards to AI-driven creative testing—helping clients achieve measurable growth across every vertical. By balancing automation efficiency with human creativity, Zuridox ensures brands stay competitive while maintaining authentic customer relationships.
     `,
-    author: "Farhan Raza",
+    author: "Henry",
     coverImage: blog1,
   },
   {
@@ -42,7 +42,7 @@ const blogData: BlogPost[] = [
 
       Zuridox specializes in omnichannel SEO—crafting tailored strategies for Google, YouTube, TikTok, Instagram, and app stores. By ensuring clients appear prominently across every relevant platform, we maximize reach, engagement, and conversions in today’s fragmented digital ecosystem.
     `,
-    author: "Ashhar Jamali",
+    author: "Thomas",
     coverImage: blog2,
   },
   {
@@ -64,7 +64,7 @@ const blogData: BlogPost[] = [
 
       Zuridox empowers brands to develop customized omnichannel frameworks, mapping customer journeys and optimizing each interaction. Our approach ensures every consumer touchpoint—whether online or offline—reinforces the brand identity, drives conversions, and builds long-term loyalty.
     `,
-    author: "Nida Sayyed",
+    author: "Jerry",
     coverImage: blog3,
   },
   {
@@ -83,7 +83,7 @@ const blogData: BlogPost[] = [
 
       Zuridox helps brands unlock the full potential of social commerce. From designing platform-native campaigns to leveraging analytics for real-time optimization, we create experiences that inspire action, nurture trust, and build genuine loyalty within digital communities.
     `,
-    author: "Md Savez",
+    author: "Williom",
     coverImage: blog4,
   },
   {
@@ -102,7 +102,7 @@ const blogData: BlogPost[] = [
 
       At Zuridox, we design influencer strategies that balance creativity, credibility, and conversion. By combining data-driven influencer selection with engaging storytelling, we help clients build impactful campaigns that drive both awareness and sales.
     `,
-    author: "Md Aquib Raza",
+    author: "Paul",
     coverImage: blog5,
   },
   {
@@ -121,7 +121,7 @@ const blogData: BlogPost[] = [
 
       Zuridox helps brands adopt privacy-first marketing strategies, from secure data collection methods to advanced customer segmentation powered by first-party insights. Our mission is to create meaningful connections between brands and audiences—without compromising trust.
     `,
-    author: "Rihan Turk",
+    author: "Kene Roheo",
     coverImage: blog6,
   },
 ];

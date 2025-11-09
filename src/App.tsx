@@ -12,7 +12,6 @@ import Services from "./components/Services";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Partners from "./components/Partners";
 import Testimonials from "./components/Testimonials";
-import Team from "./components/Team";
 import Footer from "./components/Footer";
 import AboutPage from "./components/pages/AboutPage";
 import CareersPage from "./components/pages/CareersPage";
@@ -64,7 +63,6 @@ function App() {
                 <WhyChooseUs />
                 <Partners />
                 <Testimonials />
-                <Team />
               </>
             }
           />
@@ -84,11 +82,11 @@ function App() {
           <Route path="/seo" element={<SearchEngineOptimizationPage />} />
           <Route path="/digitalmarketing" element={<DigitalMarketingPage />} />
           <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<Post />} />
+          <Route path="/blog/:slug" element={<Post />} />
         </Routes>
         <Footer />
       </div>
-      <WhatsAppButton />
+      {/* <WhatsAppButton /> */}
     </Router>
   );
 }
