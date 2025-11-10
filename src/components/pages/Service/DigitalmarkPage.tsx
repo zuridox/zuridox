@@ -141,10 +141,10 @@ const DigitalMarketingPage = () => {
 
             <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg text-center">
               <FaGoogle className="mx-auto mb-6 text-6xl text-green-500" />
-              <h3 className="text-xl font-semibold mb-4">SEO Integration</h3>
+              <h3 className="text-xl font-semibold mb-4">. Integration</h3>
               <p>
                 Improve visibility with campaigns that work seamlessly with
-                on-site SEO strategies.
+                on-site . strategies.
               </p>
             </div>
           </div>

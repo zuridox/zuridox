@@ -15,7 +15,7 @@ const footerNavigation = {
   solutions: [
     { name: "Web Development", to: "/WebDev" },
     { name: "App Development", to: "/appdev" },
-    { name: "search Engine Optimization", to: "/seo" },
+    // { name: "search Engine Optimization", to: "/." },
     { name: "Digital Marketing", to: "/digitalmarketing" },
     // { name: "Comprehensive IT Consulting", to: "#" },
   ],
@@ -88,13 +88,13 @@ export default function Footer() {
                 <Mail className="w-5 h-5 group-hover:text-blue-400" />
                 <span>contact@zuridox.com</span>
               </a>
-              <a
+              {/* <a
                 href="tel:+17602740909"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
               >
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
                 <span>+1 7602740909</span>
-              </a>
+              </a> */}
               {/* <a
                 href="tel:+917050068050"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"

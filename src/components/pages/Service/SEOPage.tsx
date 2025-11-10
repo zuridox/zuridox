@@ -29,16 +29,15 @@ const SEOPage = () => {
         } text-white`}
       >
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">
+          {/* <h1 className="text-4xl font-bold mb-4">
             Search Engine Optimization
-          </h1>
+          </h1> */}
           <p
             className={`text-xl ${
               theme === "dark" ? "text-gray-300" : "text-blue-100"
             }`}
           >
-            Unlock the Power of SEO to Drive Traffic, Engagement, and
-            Conversions
+            Unlock the Power of . to Drive Traffic, Engagement, and Conversions
           </p>
         </div>
       </div>
@@ -80,10 +79,10 @@ const SEOPage = () => {
 
           <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg text-center">
             <FaBullhorn className="mx-auto mb-6 text-6xl text-yellow-500" />
-            <h3 className="text-2xl font-semibold mb-4">Off-Page SEO</h3>
+            <h3 className="text-2xl font-semibold mb-4">Off-Page .</h3>
             <p className="text-base mb-4">
               Build quality backlinks and improve domain authority with
-              strategic off-page SEO techniques.
+              strategic off-page . techniques.
             </p>
             <Link
               to="#"
@@ -96,7 +95,7 @@ const SEOPage = () => {
 
         {/* Our Approach Section */}
         <div className="my-12 text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Approach to SEO</h2>
+          <h2 className="text-3xl font-bold mb-6">Our Approach to .</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-12">
             <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg text-center">
               <FaMobileAlt className="mx-auto mb-6 text-6xl text-blue-500" />
@@ -120,7 +119,7 @@ const SEOPage = () => {
 
             <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg text-center">
               <FaSearch className="mx-auto mb-6 text-6xl text-green-500" />
-              <h3 className="text-xl font-semibold mb-4">Technical SEO</h3>
+              <h3 className="text-xl font-semibold mb-4">Technical .</h3>
               <p>
                 Optimize your site's architecture, improve loading speeds, and
                 fix crawl errors for better rankings.
@@ -140,16 +139,16 @@ const SEOPage = () => {
           </div>
         </div>
 
-        {/* Our SEO Process Section */}
+        {/* Our . Process Section */}
         <div className="my-12 text-center">
-          <h2 className="text-3xl font-bold mb-6">Our SEO Process</h2>
+          <h2 className="text-3xl font-bold mb-6">Our . Process</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-12">
             <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
               <FaSearch className="mx-auto mb-6 text-6xl text-blue-500" />
               <h3 className="text-xl font-semibold mb-4">Discovery</h3>
               <p>
                 Research your target audience, competitors, and industry trends
-                to craft a custom SEO strategy.
+                to craft a custom . strategy.
               </p>
             </div>
 

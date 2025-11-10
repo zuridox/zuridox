@@ -29,18 +29,18 @@ const blogData: BlogPost[] = [
   {
     id: 2,
     slug: "search-everywhere-optimization",
-    title: "Search Everywhere Optimization: The New SEO Frontier",
+    title: "Search Everywhere Optimization: The New . Frontier",
     date: "2024-12-24",
     content: `
-      Traditional SEO is no longer enough in a world where consumers discover brands through Google, YouTube, TikTok, and even voice assistants. In 2025, 'search everywhere optimization' means adapting strategies for multi-channel discovery. 
+      Traditional . is no longer enough in a world where consumers discover brands through Google, YouTube, TikTok, and even voice assistants. In 2025, 'search everywhere optimization' means adapting strategies for multi-channel discovery. 
 
       Brands must optimize content not just for websites, but also for social platforms, app stores, and even smart devices. With the rise of voice search, conversational keywords and structured data play a major role. On YouTube and TikTok, short-form and video-first strategies dominate discovery, while social media platforms are becoming search engines in themselves.
 
-      Gen Z and Millennials increasingly rely on Instagram hashtags, TikTok trends, and Reddit discussions for decision-making. This shift requires brands to create platform-native SEO strategies, blending storytelling with keyword optimization to capture attention.
+      Gen Z and Millennials increasingly rely on Instagram hashtags, TikTok trends, and Reddit discussions for decision-making. This shift requires brands to create platform-native . strategies, blending storytelling with keyword optimization to capture attention.
 
       Moreover, AI-powered search algorithms now focus on user intent rather than keyword stuffing. Visual search is also expanding, where consumers search by uploading an image instead of typing queries. Optimizing for this trend requires detailed product metadata and high-quality visuals.
 
-      Zuridox specializes in omnichannel SEO—crafting tailored strategies for Google, YouTube, TikTok, Instagram, and app stores. By ensuring clients appear prominently across every relevant platform, we maximize reach, engagement, and conversions in today’s fragmented digital ecosystem.
+      Zuridox specializes in omnichannel .—crafting tailored strategies for Google, YouTube, TikTok, Instagram, and app stores. By ensuring clients appear prominently across every relevant platform, we maximize reach, engagement, and conversions in today’s fragmented digital ecosystem.
     `,
     author: "Thomas",
     coverImage: blog2,

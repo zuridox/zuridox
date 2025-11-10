@@ -20,14 +20,14 @@ import NewsPage from "./components/pages/NewsPage";
 import CaseStudiesPage from "./components/pages/CaseStudiesPage";
 import EventsPage from "./components/pages/EventsPage";
 import HelpCenterPage from "./components/pages/HelpCenterPage";
-import WhatsAppButton from "./components/WhatsappButton";
+// import WhatsAppButton from "./components/WhatsappButton";
 import ContactPage from "./components/pages/contactPage";
 import PrivacyPolicyPage from "./components/pages/PrivacyPage";
 import TermsAndcondition from "./components/pages/TermsandCon";
 import PageNotFound from "./components/pages/PageNotFound";
 import WebDevelopmentPage from "./components/pages/Service/WebDevPage";
 import MobileAppDevelopmentPage from "./components/pages/Service/AppDevPage";
-import SearchEngineOptimizationPage from "./components/pages/Service/SEOPage";
+// import SearchEngineOptimizationPage from "./components/pages/Service/.Page";
 import DigitalMarketingPage from "./components/pages/Service/DigitalmarkPage";
 import Blog from "./components/pages/Blog";
 import Post from "./components/pages/Post";
@@ -79,7 +79,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
           <Route path="/webdev" element={<WebDevelopmentPage />} />
           <Route path="/appdev" element={<MobileAppDevelopmentPage />} />
-          <Route path="/seo" element={<SearchEngineOptimizationPage />} />
+          {/* <Route path="/." element={<SearchEngineOptimizationPage />} /> */}
           <Route path="/digitalmarketing" element={<DigitalMarketingPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<Post />} />

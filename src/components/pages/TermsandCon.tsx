@@ -592,11 +592,11 @@ export default function TermsAndConditionsPage() {
                   <h3 className="font-bold">Email</h3>
                   <p>contact@zuridox.com</p>
                 </div>
-                <div>
+                {/* <div>
                   <Phone className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="font-bold">Phone</h3>
                   <p>+1 7602740909</p>
-                </div>
+                </div> */}
                 {/* <div>
                   <Shield className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="font-bold">Address</h3>

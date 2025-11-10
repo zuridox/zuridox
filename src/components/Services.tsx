@@ -38,19 +38,19 @@ const services = [
     color: "from-indigo-600 to-indigo-800",
     link: "/appdev", // Add link here
   },
-  {
-    icon: Workflow,
-    title: "Search Engine Optimization",
-    description:
-      "Boosting online visibility through proven SEO strategies to drive organic traffic and improve search rankings.",
-    features: [
-      "Keyword Optimization",
-      "On-Page & Off-Page SEO",
-      "Content Strategy",
-    ],
-    color: "from-red-600 to-red-800",
-    link: "/seo", // Add link here
-  },
+  // {
+  //   icon: Workflow,
+  //   title: "Search Engine Optimization",
+  //   description:
+  //     "Boosting online visibility through proven . strategies to drive organic traffic and improve search rankings.",
+  //   features: [
+  //     "Keyword Optimization",
+  //     "On-Page & Off-Page .",
+  //     "Content Strategy",
+  //   ],
+  //   color: "from-red-600 to-red-800",
+  //   link: "/.", // Add link here
+  // },
   {
     icon: Database,
     title: "Data Intelligence",

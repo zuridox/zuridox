@@ -138,7 +138,7 @@ const WebDevelopmentPage = () => {
             <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg text-center">
               <FaReact className="mx-auto mb-6 text-6xl text-cyan-500" />
               <h3 className="text-xl font-semibold mb-4">
-                SEO-Friendly Development
+                .-Friendly Development
               </h3>
               <p>
                 We build websites optimized for search engines, ensuring higher
