@@ -12,7 +12,7 @@ const navigation = [
       { name: "Web Development", to: "/WebDev" },
       { name: "App Development", to: "/appdev" },
       // { name: "Search Engine Optimization", to: "/." },
-      { name: "Digital Marketing", to: "/digitalmarketing" },
+      // { name: "Digital Marketing", to: "/digitalmarketing" },
     ],
   },
   { name: "About", to: "/about" },

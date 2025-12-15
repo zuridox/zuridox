@@ -64,19 +64,19 @@ const services = [
     color: "from-green-600 to-green-800",
     link: "#", // Add link here
   },
-  {
-    icon: Users,
-    title: "Digital Marketing",
-    description:
-      "Strategic digital marketing solutions designed to grow your brand, connect with audiences, and drive results.",
-    features: [
-      "Social Media Campaigns",
-      "Pay-Per-Click Advertising",
-      "Content Marketing",
-    ],
-    color: "from-purple-600 to-purple-800",
-    link: "/digitalmarketing", // Add link here
-  },
+  // {
+  //   icon: Users,
+  //   title: "Digital Marketing",
+  //   description:
+  //     "Strategic digital marketing solutions designed to grow your brand, connect with audiences, and drive results.",
+  //   features: [
+  //     "Social Media Campaigns",
+  //     "Pay-Per-Click Advertising",
+  //     "Content Marketing",
+  //   ],
+  //   color: "from-purple-600 to-purple-800",
+  //   link: "/digitalmarketing", // Add link here
+  // },
   {
     icon: Shield,
     title: "Comprehensive IT Solutions",

@@ -10,10 +10,10 @@ const blogData: BlogPost[] = [
   {
     id: 1,
     slug: "ai-transforming-marketing",
-    title: "How AI is Transforming Digital Marketing in 2025",
+    title: "How AI is Transforming  in 2025",
     date: "2024-12-22",
     content: `
-      Artificial Intelligence (AI) is fundamentally reshaping the digital marketing landscape. In 2025, advanced AI-driven analytics and automation tools allow agencies to refine targeting, personalize content, and optimize campaign spend with unprecedented precision. 
+      Artificial Intelligence (AI) is fundamentally reshaping the  landscape. In 2025, advanced AI-driven analytics and automation tools allow agencies to refine targeting, personalize content, and optimize campaign spend with unprecedented precision. 
       
       Brands increasingly leverage AI to gather insights from customer data, enabling hyper-personalized experiences across platforms. From predictive lead scoring to real-time ad optimization, AI enables marketers to anticipate trends and respond rapidly to market changes. 
 
@@ -111,7 +111,7 @@ const blogData: BlogPost[] = [
     title: "Data Privacy and Marketing: Building Trust in the Digital Age",
     date: "2025-01-05",
     content: `
-      In the era of personalization, data is the lifeblood of digital marketing. Yet with rising privacy concerns, consumers are more cautious about how their information is collected, stored, and used. In 2025, trust has become a competitive advantage.
+      In the era of personalization, data is the lifeblood of . Yet with rising privacy concerns, consumers are more cautious about how their information is collected, stored, and used. In 2025, trust has become a competitive advantage.
 
       Global regulations like GDPR in Europe and CCPA in California have already set strict standards for data handling. Beyond compliance, brands must demonstrate transparency in their practices—clearly explaining why data is collected and how it benefits the consumer.
 

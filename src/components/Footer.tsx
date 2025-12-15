@@ -16,7 +16,7 @@ const footerNavigation = {
     { name: "Web Development", to: "/WebDev" },
     { name: "App Development", to: "/appdev" },
     // { name: "search Engine Optimization", to: "/." },
-    { name: "Digital Marketing", to: "/digitalmarketing" },
+    // { name: "Digital Marketing", to: "/digitalmarketing" },
     // { name: "Comprehensive IT Consulting", to: "#" },
   ],
   company: [

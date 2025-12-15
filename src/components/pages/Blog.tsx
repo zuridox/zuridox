@@ -28,7 +28,7 @@ const Blog: React.FC = () => {
             theme === "dark" ? "text-gray-400" : "text-gray-600"
           }`}
         >
-          Insights on technology, web development, and digital marketing.
+          Insights on technology, web development
         </p>
       </header>
 
