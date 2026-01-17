@@ -1,13 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
+import { ThemeProvider } from "./ThemeContext";
 import "./index.css";
 
-const rootElement = document.getElementById("root");
-if (!rootElement) throw new Error("Root element not found");
+const root = document.getElementById("root");
 
-createRoot(rootElement).render(
+if (!root) throw new Error("Root element not found");
+
+createRoot(root).render(
   <StrictMode>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </StrictMode>,
 );
