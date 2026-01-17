@@ -78,7 +78,8 @@ export default function Footer() {
               }`}
             >
               Transforming businesses through innovative technology solutions.
-              Your trusted partner in digital excellence and IT consulting.
+              Your trusted partner for digital excellence and reliable IT
+              services.
             </p>
             <div className="space-y-4">
               <a
@@ -88,13 +89,13 @@ export default function Footer() {
                 <Mail className="w-5 h-5 group-hover:text-blue-400" />
                 <span>contact@zuridox.com</span>
               </a>
-              {/* <a
-                href="tel:+17602740909"
+              <a
+                href="tel:+919389678954"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
               >
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
-                <span>+1 7602740909</span>
-              </a> */}
+                <span>+91 9389678954</span>
+              </a>
               {/* <a
                 href="tel:+917050068050"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
@@ -102,10 +103,10 @@ export default function Footer() {
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
                 <span>+91 7050068050</span>
               </a> */}
-              {/* <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5" />
                 <span>Jasola Vihar, Delhi, India 110025</span>
-              </div> */}
+              </div>
             </div>
           </div>
 

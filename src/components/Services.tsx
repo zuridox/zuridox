@@ -4,7 +4,6 @@ import * as THREE from "three";
 import {
   Code2,
   Smartphone,
-  Users,
   ArrowUpRight,
   // Workflow,
   Database,
@@ -38,6 +37,33 @@ const services = [
     color: "from-indigo-600 to-indigo-800",
     link: "/appdev", // Add link here
   },
+  {
+    icon: Database,
+    title: "Data Intelligence",
+    description:
+      "Data analytics and machine learning solutions designed to help businesses understand data, improve processes, and make informed decisions.",
+    features: [
+      "Data Analytics & Reporting",
+      "Machine Learning Solutions",
+      "Business Intelligence Dashboards",
+    ],
+    color: "from-green-600 to-green-800",
+    link: "#",
+  },
+  {
+    icon: Shield,
+    title: "Comprehensive IT Solutions",
+    description:
+      "End-to-end IT services focused on system reliability, performance optimization, and technical support for business operations.",
+    features: [
+      "Managed IT Services",
+      "Infrastructure Optimization",
+      "Technical Support Services",
+    ],
+    color: "from-cyan-600 to-cyan-800",
+    link: "#",
+  },
+
   // {
   //   icon: Workflow,
   //   title: "Search Engine Optimization",
@@ -51,19 +77,6 @@ const services = [
   //   color: "from-red-600 to-red-800",
   //   link: "/.", // Add link here
   // },
-  {
-    icon: Database,
-    title: "Data Intelligence",
-    description:
-      "Advanced data analytics and AI-driven insights to transform complex data into strategic business intelligence.",
-    features: [
-      "Big Data Analytics",
-      "Machine Learning Solutions",
-      "Predictive Modeling",
-    ],
-    color: "from-green-600 to-green-800",
-    link: "#", // Add link here
-  },
   // {
   //   icon: Users,
   //   title: "Digital Marketing",
@@ -77,19 +90,6 @@ const services = [
   //   color: "from-purple-600 to-purple-800",
   //   link: "/digitalmarketing", // Add link here
   // },
-  {
-    icon: Shield,
-    title: "Comprehensive IT Solutions",
-    description:
-      "Holistic IT services to streamline operations, enhance security, and support business innovation.",
-    features: [
-      "Managed IT Services",
-      "Infrastructure Optimization",
-      "IT Consulting",
-    ],
-    color: "from-cyan-600 to-cyan-800",
-    link: "#", // Add link here
-  },
 ];
 
 const ProfessionalParticleBackground: React.FC = () => {
@@ -102,7 +102,7 @@ const ProfessionalParticleBackground: React.FC = () => {
       75,
       window.innerWidth / window.innerHeight,
       0.1,
-      1000
+      1000,
     );
     camera.position.z = 5;
 
