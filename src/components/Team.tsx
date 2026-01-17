@@ -6,7 +6,7 @@ import Farhan from "../assets/Team/farhan raza.png";
 
 const team = [
   {
-    name: "Md Farhan Raza",
+    name: "Md Farhan",
     role: "Software Engineer",
     designation: "Founder",
     image: Farhan,
