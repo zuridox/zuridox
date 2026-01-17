@@ -15,15 +15,12 @@ const footerNavigation = {
   solutions: [
     { name: "Web Development", to: "/WebDev" },
     { name: "App Development", to: "/appdev" },
-    // { name: "search Engine Optimization", to: "/." },
-    // { name: "Digital Marketing", to: "/digitalmarketing" },
-    // { name: "Comprehensive IT Consulting", to: "#" },
   ],
   company: [
     { name: "About Us", to: "/about" },
     { name: "Case Studies", to: "/case-studies" },
     { name: "Blog", to: "/blog" },
-    { name: "Strategic Partners", to: "/partners" },
+    // { name: "Strategic Partners", to: "/partners" },
     { name: "Careers", to: "/careers" },
     { name: "Contact Us", to: "/contact" },
   ],
