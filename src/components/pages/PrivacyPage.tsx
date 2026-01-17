@@ -1,4 +1,4 @@
-import { Shield, Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useTheme } from "../../ThemeContext";
 
 export default function PrivacyPolicyPage() {
@@ -263,7 +263,7 @@ export default function PrivacyPolicyPage() {
                 {/* <div>
                   <Shield className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="font-bold">Address</h3>
-                  <p>Jasola Vihar , Delhi , india 110025</p>
+                  <p>Jasola Vihar , Delhi , india 110044</p>
                 </div> */}
               </div>
             </section>

@@ -41,7 +41,7 @@ const services = [
     icon: Database,
     title: "Data Intelligence",
     description:
-      "Data analytics and machine learning solutions designed to help businesses understand data, improve processes, and make informed decisions.",
+      "Data analytics and machine learning solutions to help businesses understand data, optimize processes, and make smarter decisions.",
     features: [
       "Data Analytics & Reporting",
       "Machine Learning Solutions",
