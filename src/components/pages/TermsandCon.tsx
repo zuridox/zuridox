@@ -160,7 +160,7 @@ export default function TermsAndConditionsPage() {
                 SECTION 4 – MODIFICATIONS TO THE SERVICE AND PRICES
               </h2>
               <p className="mb-4">
-                Prices for our products are subject to change without notice.
+                Prices for our products are as subject to change without notice.
                 <br />
                 <br />
                 We reserve the right at any time to modify or discontinue the
