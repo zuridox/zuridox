@@ -242,7 +242,7 @@ export default function PrivacyPolicyPage() {
                 If you would like to: access, correct, amend or delete any
                 personal information we have about you, register a complaint, or
                 simply want more information contact our Privacy Compliance
-                Officer at contact@zuridox.com or
+                Officer at contact@zuridox.com
               </p>
             </section>
 

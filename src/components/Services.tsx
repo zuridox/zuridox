@@ -22,7 +22,7 @@ const services = [
       "Progressive Web Apps",
     ],
     color: "from-blue-600 to-blue-800",
-    link: "/WebDev", // Add link here
+    link: "/webdev", // Add link here
   },
   {
     icon: Smartphone,
@@ -48,7 +48,6 @@ const services = [
       "Business Intelligence Dashboards",
     ],
     color: "from-green-600 to-green-800",
-    link: "#",
   },
   {
     icon: Shield,
@@ -61,7 +60,7 @@ const services = [
       "Technical Support Services",
     ],
     color: "from-cyan-600 to-cyan-800",
-    link: "#",
+    // link: "#",
   },
 
   // {
