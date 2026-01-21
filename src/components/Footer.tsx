@@ -86,13 +86,13 @@ export default function Footer() {
                 <Mail className="w-5 h-5 group-hover:text-blue-400" />
                 <span>contact@zuridox.com</span>
               </a>
-              {/* <a
+              <a
                 href="tel:+919389678954"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
               >
                 <Phone className="w-5 h-5 group-hover:text-blue-400" />
                 <span>+91 9389678954</span>
-              </a> */}
+              </a>
               {/* <a
                 href="tel:+917050068050"
                 className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
