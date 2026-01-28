@@ -23,7 +23,7 @@ export default function ContactUsPage() {
       {/* Contact Details */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
+          {/* <div
             className={`p-6 rounded-2xl shadow-sm ${
               theme === "light" ? "bg-white" : "bg-gray-800"
             }`}
@@ -31,8 +31,8 @@ export default function ContactUsPage() {
             <Phone className="w-10 h-10 text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Phone Support</h3>
             <p>+91 9389678954</p>
-          </div>
-          {/* <div
+          </div> */}
+          <div
             className={`p-6 rounded-2xl shadow-sm ${
               theme === "light" ? "bg-white" : "bg-gray-800"
             }`}
@@ -40,7 +40,7 @@ export default function ContactUsPage() {
             <Mail className="w-10 h-10 text-blue-600 mb-4" />
             <h3 className="text-xl font-bold mb-2">Email Support</h3>
             <p>contact@zuridox.com</p>
-          </div> */}
+          </div>
           {/* <div
             className={`p-6 rounded-2xl shadow-sm ${
               theme === "light" ? "bg-white" : "bg-gray-800"
