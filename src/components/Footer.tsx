@@ -20,6 +20,7 @@ const footerNavigation = {
     { name: "About Us", to: "/about" },
     { name: "Case Studies", to: "/case-studies" },
     { name: "Blog", to: "/blog" },
+    { name: "Verify Cert", to: "/verify" },
     // { name: "Strategic Partners", to: "/partners" },
     { name: "Careers", to: "/careers" },
     { name: "Contact Us", to: "/contact" },

@@ -31,6 +31,7 @@ import MobileAppDevelopmentPage from "./components/pages/Service/AppDevPage";
 import DigitalMarketingPage from "./components/pages/Service/DigitalmarkPage";
 import Blog from "./components/pages/Blog";
 import Post from "./components/pages/Post";
+import VerifyCertificate from "./components/pages/VerifyCertificate";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -83,6 +84,7 @@ function App() {
           <Route path="/digitalmarketing" element={<DigitalMarketingPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<Post />} />
+          <Route path="/verify" element={<VerifyCertificate/>} />
         </Routes>
         <Footer />
       </div>
