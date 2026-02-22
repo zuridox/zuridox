@@ -569,7 +569,7 @@ export default function TermsAndConditionsPage() {
               <h2 className="text-2xl font-bold mb-4">SECTION 20 – REFUND</h2>
               <p className="mb-4">
                 In case of any refunds or related queries, get in touch with us
-                at contact@Zuridox.com
+                at
               </p>
             </section>
             {/* 21. Termination */}
@@ -579,31 +579,10 @@ export default function TermsAndConditionsPage() {
               </h2>
               <p className="mb-4">
                 Questions about the Terms of Service should be sent to us at
-                contact@Zuridox.com.
               </p>
             </section>
 
             {/* Contact Section */}
-            <section>
-              <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                  <Mail className="w-10 h-10 text-blue-600 mb-4" />
-                  <h3 className="font-bold">Email</h3>
-                  <p>contact@zuridox.com</p>
-                </div>
-                {/* <div>
-                  <Phone className="w-10 h-10 text-blue-600 mb-4" />
-                  <h3 className="font-bold">Phone</h3>
-                  <p>+1 7602740909</p>
-                </div> */}
-                {/* <div>
-                  <Shield className="w-10 h-10 text-blue-600 mb-4" />
-                  <h3 className="font-bold">Address</h3>
-                  <p>Jasola Vihar , Delhi , india 110044</p>
-                </div> */}
-              </div>
-            </section>
           </div>
         </div>
       </div>

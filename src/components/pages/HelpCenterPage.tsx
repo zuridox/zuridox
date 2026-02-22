@@ -4,8 +4,6 @@ import {
   Book,
   FileText,
   MessageCircle,
-  Phone,
-  Mail,
   HelpCircle,
   Link,
 } from "lucide-react";
@@ -163,29 +161,10 @@ export default function HelpCenterPage() {
                   theme === "light" ? "bg-white" : "bg-gray-700"
                 }`}
               >
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-blue-50 rounded-lg">
-                      <Phone className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Phone Support</h3>
-                      <p>+91-9389678954</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 bg-blue-50 rounded-lg">
-                      <Mail className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold">Email Support</h3>
-                      <p>contact@zuridox.com</p>
-                    </div>
-                  </div>
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                    Contact Support
-                  </button>
-                </div>
+                <div className="space-y-6"></div>
+                <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                  Contact Support
+                </button>
               </div>
             </div>
           </div>

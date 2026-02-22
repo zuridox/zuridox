@@ -79,33 +79,6 @@ export default function Footer() {
               Your trusted partner for digital excellence and reliable IT
               services.
             </p>
-            <div className="space-y-4">
-              <a
-                href="mailto:contact@zuridox.com"
-                className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
-              >
-                <Mail className="w-5 h-5 group-hover:text-blue-400" />
-                <span>contact@zuridox.com</span>
-              </a>
-              {/* <a
-                href="tel:+919389678954"
-                className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
-              >
-                <Phone className="w-5 h-5 group-hover:text-blue-400" />
-                <span>+91 9389678954</span>
-              </a> */}
-              {/* <a
-                href="tel:+917050068050"
-                className="flex items-center space-x-3 hover:text-blue-400 transition-colors group"
-              >
-                <Phone className="w-5 h-5 group-hover:text-blue-400" />
-                <span>+91 7050068050</span>
-              </a> */}
-              {/* <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5" />
-                <span>Jasola Vihar, Delhi, India 110044</span>
-              </div> */}
-            </div>
           </div>
 
           {/* Navigation Sections */}
