@@ -1,4 +1,4 @@
-import { Target, Users, Rocket, Heart } from "lucide-react";
+import { Target, Users, Rocket, Heart, Building2 } from "lucide-react";
 import { useTheme } from "../../ThemeContext";
 
 const values = [
@@ -27,7 +27,7 @@ const values = [
 ];
 
 export default function AboutPage() {
-  const { theme } = useTheme(); // Get the current theme
+  const { theme } = useTheme();
 
   return (
     <div
@@ -38,13 +38,7 @@ export default function AboutPage() {
       }`}
     >
       {/* Hero Section */}
-      <div
-        className={`py-7 ${
-          theme === "dark"
-            ? "bg-gradient-to-r from-blue-800 to-blue-700"
-            : "bg-gradient-to-r from-blue-800 to-blue-700"
-        } text-white`}
-      >
+      <div className="py-7 bg-gradient-to-r from-blue-800 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">About Zuridox</h1>
           <p
@@ -60,29 +54,45 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {["Our Mission", "Our Vision"].map((title, index) => (
-            <div
-              key={index}
-              className={`p-8 rounded-2xl shadow-sm ${
-                theme === "dark"
-                  ? "bg-gray-800 text-gray-300"
-                  : "bg-white text-gray-600"
+          <div
+            className={`p-8 rounded-2xl shadow-sm ${
+              theme === "dark"
+                ? "bg-gray-800 text-gray-300"
+                : "bg-white text-gray-600"
+            }`}
+          >
+            <h2
+              className={`text-2xl font-bold mb-4 ${
+                theme === "dark" ? "text-white" : "text-gray-900"
               }`}
             >
-              <h2
-                className={`text-2xl font-bold mb-4 ${
-                  theme === "dark" ? "text-white" : "text-gray-900"
-                }`}
-              >
-                {title}
-              </h2>
-              <p>
-                {index === 0
-                  ? "To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage in the digital age."
-                  : "To be the global leader in digital transformation, recognized for our excellence, innovation, and commitment to client success."}
-              </p>
-            </div>
-          ))}
+              Our Mission
+            </h2>
+            <p>
+              To empower businesses with innovative technology solutions that
+              drive growth, efficiency, and long-term digital success.
+            </p>
+          </div>
+
+          <div
+            className={`p-8 rounded-2xl shadow-sm ${
+              theme === "dark"
+                ? "bg-gray-800 text-gray-300"
+                : "bg-white text-gray-600"
+            }`}
+          >
+            <h2
+              className={`text-2xl font-bold mb-4 ${
+                theme === "dark" ? "text-white" : "text-gray-900"
+              }`}
+            >
+              Our Vision
+            </h2>
+            <p>
+              To become a trusted global digital partner, known for innovation,
+              reliability, and transparent business practices.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -98,6 +108,7 @@ export default function AboutPage() {
           >
             Our Values
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
@@ -136,56 +147,53 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Founders Section */}
-      {/* <div className={`py-16 ${theme === "dark" ? "bg-gray-900" : "bg-white"}`}>
-        <div className="max-w-7xl mx-auto px-4">
-          <h2
-            className={`text-3xl font-bold text-center mb-12 ${
-              theme === "dark" ? "text-white" : "text-gray-900"
+      {/* Legal Information – IMPORTANT FOR PAYMENT GATEWAY */}
+      <div
+        className={`py-16 ${theme === "dark" ? "bg-gray-900" : "bg-gray-100"}`}
+      >
+        <div className="max-w-4xl mx-auto px-4">
+          <div
+            className={`p-8 rounded-2xl shadow-md ${
+              theme === "dark"
+                ? "bg-gray-800 text-gray-300"
+                : "bg-white text-gray-700"
             }`}
           >
-            Meet Our Founders
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Farhan Raza",
-                role: "Founder",
-                bio: "A visionary tech enthusiast and the driving force behind Zuridox's innovation.",
-              },
-              {
-                name: "Md Savez",
-                role: "Co-Founder",
-                bio: "A strategic thinker, empowering digital transformation through creative solutions.",
-              },
-              {
-                name: "Ashhar Jamali",
-                role: "Co-Founder",
-                bio: "A quick learner with a focus on achieving excellence in every project.",
-              },
-            ].map((founder, index) => (
-              <div
-                key={index}
-                className={`p-8 rounded-2xl shadow-sm ${
-                  theme === "dark"
-                    ? "bg-gray-800 text-gray-300"
-                    : "bg-gray-100 text-gray-700"
+            <div className="flex items-center gap-3 mb-6">
+              <Building2
+                className={`w-6 h-6 ${
+                  theme === "dark" ? "text-blue-400" : "text-blue-600"
+                }`}
+              />
+              <h2
+                className={`text-2xl font-bold ${
+                  theme === "dark" ? "text-white" : "text-gray-900"
                 }`}
               >
-                <h3
-                  className={`text-xl font-bold mb-2 ${
-                    theme === "dark" ? "text-white" : "text-gray-900"
-                  }`}
-                >
-                  {founder.name}
-                </h3>
-                <p className="font-medium mb-2">{founder.role}</p>
-                <p>{founder.bio}</p>
-              </div>
-            ))}
+                Legal Information
+              </h2>
+            </div>
+
+            <div className="space-y-2 text-sm">
+              <p>
+                <strong>Legal Business Name:</strong> Zuridox
+              </p>
+              <p>
+                <strong>Business Type:</strong> Sole Proprietorship
+              </p>
+              <p>
+                <strong>Registered Address:</strong> Delhi, India
+              </p>
+              <p>
+                <strong>Official Email:</strong> contact@zuridox.com
+              </p>
+              <p>
+                <strong>Website:</strong> https://www.zuridox.com
+              </p>
+            </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

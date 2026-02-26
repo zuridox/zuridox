@@ -1,15 +1,8 @@
-import { Link } from "react-router-dom"; // Import Link
-import {
-  Facebook,
-  Linkedin,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Link } from "react-router-dom";
+import { Facebook, Linkedin, Instagram, Mail } from "lucide-react";
 import { useTheme } from "../ThemeContext";
-import LogoLight from "../assets/Light-theme-Logo1.png"; // Light theme logo
-import LogoDark from "../assets/Zuridox-Logo.png"; // Dark theme logo
+import LogoLight from "../assets/Light-theme-Logo1.png";
+import LogoDark from "../assets/Zuridox-Logo.png";
 
 const footerNavigation = {
   solutions: [
@@ -21,7 +14,6 @@ const footerNavigation = {
     { name: "Case Studies", to: "/case-studies" },
     { name: "Blog", to: "/blog" },
     { name: "Verify Cert", to: "/verify" },
-    // { name: "Strategic Partners", to: "/partners" },
     { name: "Careers", to: "/careers" },
     { name: "Contact Us", to: "/contact" },
   ],
@@ -30,21 +22,9 @@ const footerNavigation = {
     { name: "Terms & Conditions", to: "/terms" },
   ],
   social: [
-    {
-      name: "LinkedIn",
-      icon: Linkedin,
-      href: "#",
-    },
-    {
-      name: "Facebook",
-      icon: Facebook,
-      href: "#",
-    },
-    {
-      name: "Instagram",
-      icon: Instagram,
-      href: "#",
-    },
+    { name: "LinkedIn", icon: Linkedin, href: "#" },
+    { name: "Facebook", icon: Facebook, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "#" },
   ],
 };
 
@@ -70,8 +50,9 @@ export default function Footer() {
                 className="h-12 mb-6 max-w-full"
               />
             </Link>
+
             <p
-              className={`mb-8 text-lg leading-relaxed max-w-md ${
+              className={`mb-6 text-lg leading-relaxed max-w-md ${
                 theme === "dark" ? "text-gray-300" : "text-gray-700"
               }`}
             >
@@ -79,6 +60,30 @@ export default function Footer() {
               Your trusted partner for digital excellence and reliable IT
               services.
             </p>
+
+            {/* Improved Email Design */}
+            <div className="flex items-center gap-3">
+              <div
+                className={`p-2 rounded-lg ${
+                  theme === "dark" ? "bg-gray-800" : "bg-white shadow-sm"
+                }`}
+              >
+                <Mail
+                  className={`w-5 h-5 ${
+                    theme === "dark" ? "text-blue-400" : "text-blue-600"
+                  }`}
+                />
+              </div>
+
+              <a
+                href="mailto:contact@zuridox.com"
+                className={`text-sm font-medium hover:text-blue-400 transition-colors ${
+                  theme === "dark" ? "text-gray-300" : "text-gray-700"
+                }`}
+              >
+                contact@zuridox.com
+              </a>
+            </div>
           </div>
 
           {/* Navigation Sections */}
@@ -130,9 +135,9 @@ export default function Footer() {
                 );
               })}
             </div>
+
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Zuridox Technologies. All rights
-              reserved.
+              © {new Date().getFullYear()} Zuridox. All rights reserved.
             </p>
           </div>
         </div>
