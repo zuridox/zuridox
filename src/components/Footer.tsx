@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Facebook, Linkedin, Instagram, Mail } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Phone, Mail } from "lucide-react";
 import { useTheme } from "../ThemeContext";
 import LogoLight from "../assets/Light-theme-Logo1.png";
 import LogoDark from "../assets/Zuridox-Logo.png";
@@ -82,6 +82,29 @@ export default function Footer() {
                 }`}
               >
                 contact@zuridox.com
+              </a>
+            </div>
+
+            <div className="flex items-center gap-3 mt-3">
+              <div
+                className={`p-2 rounded-lg ${
+                  theme === "dark" ? "bg-gray-800" : "bg-white shadow-sm"
+                }`}
+              >
+                <Phone
+                  className={`w-5 h-5 ${
+                    theme === "dark" ? "text-blue-400" : "text-blue-600"
+                  }`}
+                />
+              </div>
+
+              <a
+                href="tel:+919389678954"
+                className={`text-sm font-medium hover:text-blue-400 transition-colors ${
+                  theme === "dark" ? "text-gray-300" : "text-gray-700"
+                }`}
+              >
+                +91 9389678954
               </a>
             </div>
           </div>
