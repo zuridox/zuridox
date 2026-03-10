@@ -181,12 +181,12 @@ export default function AboutPage() {
               <p>
                 <strong>Business Type:</strong> Sole Proprietorship
               </p>
-              <p>
-                <strong>Registered Address:</strong> Delhi, India
-              </p>
-              <p>
+              {/* <p>
+                <strong>Registered Address:</strong>India
+              </p> */}
+              {/* <p>
                 <strong>Official Email:</strong> contact@zuridox.com
-              </p>
+              </p> */}
               <p>
                 <strong>Website:</strong> https://www.zuridox.com
               </p>

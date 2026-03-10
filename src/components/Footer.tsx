@@ -62,7 +62,7 @@ export default function Footer() {
             </p>
 
             {/* Improved Email Design */}
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <div
                 className={`p-2 rounded-lg ${
                   theme === "dark" ? "bg-gray-800" : "bg-white shadow-sm"
@@ -83,9 +83,9 @@ export default function Footer() {
               >
                 contact@zuridox.com
               </a>
-            </div>
+            </div> */}
 
-            <div className="flex items-center gap-3 mt-3">
+            {/* <div className="flex items-center gap-3 mt-3">
               <div
                 className={`p-2 rounded-lg ${
                   theme === "dark" ? "bg-gray-800" : "bg-white shadow-sm"
@@ -106,7 +106,7 @@ export default function Footer() {
               >
                 +91 9389678954
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Navigation Sections */}
