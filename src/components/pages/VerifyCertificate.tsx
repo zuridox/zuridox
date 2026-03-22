@@ -24,6 +24,20 @@ function VerifyCertificate() {
       company: "Zuridox",
       status: "Verified",
     },
+    "ZDX-FA-2025-0311": {
+    name: "Md. Farhan Raza",
+    role: "Data Analyst & Web Developer",
+    duration: "March 2023 – March 2026",
+    company: "Zuridox",
+    status: "Verified",
+  },
+    "ZDX-AS-2025-0315": {
+    name: "Ashhar jamali",
+    role: "Data Analyst & Web Developer",
+    duration: "March 2023 – March 2026",
+    company: "Zuridox",
+    status: "Verified",
+  },
   };
   useEffect(() => {
     const calendly = document.querySelector(".calendly-badge-widget");
