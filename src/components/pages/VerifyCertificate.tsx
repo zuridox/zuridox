@@ -32,7 +32,7 @@ function VerifyCertificate() {
     status: "Verified",
   },
     "ZDX-AS-2025-0315": {
-    name: "Ashhar jamali",
+    name: "Ashhar Jamali",
     role: "Data Analyst & Web Developer",
     duration: "March 2023 – March 2026",
     company: "Zuridox",
