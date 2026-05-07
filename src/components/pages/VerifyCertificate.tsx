@@ -24,14 +24,14 @@ function VerifyCertificate() {
       company: "Zuridox",
       status: "Verified",
     },
-    "ZDX-FA-2025-0311": {
+    "ZDX-FA-2026-0311": {
     name: "Md. Farhan Raza",
     role: "Data Analyst & Web Developer",
     duration: "March 2023 – March 2026",
     company: "Zuridox",
     status: "Verified",
   },
-    "ZDX-AS-2025-0315": {
+    "ZDX-AS-2026-0315": {
     name: "Ashhar Jamali",
     role: "Data Analyst & Web Developer",
     duration: "March 2023 – March 2026",
