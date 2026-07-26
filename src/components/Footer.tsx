@@ -99,12 +99,12 @@ export default function Footer() {
               </div>
 
               <a
-                href="tel:+919389678954"
+                href="tel:+16126543738"
                 className={`text-sm font-medium hover:text-blue-400 transition-colors ${
                   theme === "dark" ? "text-gray-300" : "text-gray-700"
                 }`}
               >
-                +91 9389678954
+                +1 612-654-3738
               </a>
             </div>
           </div>
