@@ -50,7 +50,15 @@ function VerifyCertificate() {
       description:
         "To Whom It May Concern, This is to certify that Md Farhan Rza worked with Zuridox as an MIS Analyst in the Information Technology & MIS department from 15 August 2025 to 15 July 2026, completing a period of 11 months.",
     },
-
+    "WCO-EXP-2026-1298": {
+      name: "Ashhar Jamali",
+      role: "MIS Analyst",
+      duration: "15 August 2025 – 15 July 2026",
+      company: "Zuridox",
+      status: "Verified",
+      description:
+        "To Whom It May Concern, This is to certify that Ashhar Jamali worked with Zuridox as an MIS Analyst in the Information Technology & MIS department from 15 August 2025 to 15 July 2026, completing a period of 11 months.",
+    },
     "ZDX-AS-2026-0315": {
       name: "Ashhar Jamali",
       role: "Data Analyst & Web Developer",
