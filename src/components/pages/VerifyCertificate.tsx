@@ -43,7 +43,7 @@ function VerifyCertificate() {
 
     "WCO-EXP-2026-1291": {
       name: "Md. Farhan Rza",
-      role: "MIS Analyst",
+      role: "MIS Analyst - ERP & Business Reporting",
       duration: "15 August 2025 – 15 July 2026",
       company: "Zuridox",
       status: "Verified",
@@ -52,7 +52,7 @@ function VerifyCertificate() {
     },
     "WCO-EXP-2026-1298": {
       name: "Ashhar Jamali",
-      role: "MIS Analyst",
+      role: "MIS Analyst - ERP & Business Reporting",
       duration: "15 August 2025 – 15 July 2026",
       company: "Zuridox",
       status: "Verified",
