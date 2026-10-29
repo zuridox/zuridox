@@ -50,6 +50,18 @@ function VerifyCertificate() {
       description:
         "To Whom It May Concern, This is to certify that Md Farhan Rza worked with Zuridox as an MIS Analyst in the Information Technology & MIS department from 15 August 2025 to 15 July 2026, completing a period of 11 months.",
     },
+    
+    // Naya Add Kiya Gaya IT Support & SysAdmin Experience Certificate
+    "ZDX-ITS-2026-0312": {
+      name: "Md. Farhan Rza",
+      role: "IT Support Engineer & Systems Administrator",
+      duration: "July 2023 – September 2026",
+      company: "Zuridox",
+      status: "Verified",
+      description:
+        "To Whom It May Concern, This is to certify that Md Farhan Rza successfully completed an Internship as an IT Support & Systems Administrator from July 2023 to December 2023 (6 months), followed by a Full-Time tenure from January 2024 to September 2026, completing a total combined professional experience of 3 years and 2 months at Zuridox.",
+    },
+
     "WCO-EXP-2026-1298": {
       name: "Ashhar Jamali",
       role: "MIS Analyst - ERP & Business Reporting",
@@ -163,7 +175,7 @@ function VerifyCertificate() {
                   setCertificateId(e.target.value.toUpperCase())
                 }
                 onKeyDown={handleKeyPress}
-                placeholder="e.g. ZDX-INT-2025-098"
+                placeholder="e.g. ZDX-ITS-2026-0312"
                 autoFocus
                 className="w-full px-4 py-3.5 text-slate-200 bg-slate-800 border-2 border-slate-700 rounded-xl focus:border-blue-400 focus:bg-slate-900 focus:outline-none transition-all duration-200 placeholder:text-slate-500 font-medium tracking-wide"
               />
